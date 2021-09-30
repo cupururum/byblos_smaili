@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"next\" \"cd studio && sanity start\"",
+    "build": "echo 'Building Sanity to public/studio…' && cd studio && sanity build ../public/studio -y && cd .. && next build",
+    "start": "next start",
+    "sanity": "cd studio && sanity start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "next-sanity": "^0.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.5",
+    "tailwindcss": "^2.2.4"
+  }
+}

@@ -4,7 +4,7 @@
 const previewSecret = 'kM}3{p<W/`da.rp6%`!jS/sCf6d*:]USZkDGY-F[aU'
 
 // Replace `remoteUrl` with your deployed Next.js site
-const remoteUrl = `https://your-nextjs-site.com`
+const remoteUrl = `https://byblos-prod.sanity.studio/`
 const localUrl = `http://localhost:3000`
 
 export default function resolveProductionUrl(doc) {

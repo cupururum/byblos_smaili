@@ -1,9 +1,7 @@
 import React from 'react';
 
 import Logistics from '../logistics/logistics';
-import hummusPlate from './assets/hummus.png';
-import mutabalPlate from './assets/mutabal.png';
-import zestawPlate from './assets/zestaw.png';
+
 
 function Hero() {
     return (
@@ -27,11 +25,11 @@ function Hero() {
             </div>
             <div className="flex justify-between h-132 lg:h-88 xl:h-132 dxl:h-136 2xl:h-148 3xl:h-152 4xl:h-196">
             
-                <img className="hidden object-contain lg:block lg:w-72 lg:h-84 lg:mt-20 xl:w-88 xl:h-100 xl:mt-28 dxl:w-92 dxl:h-104 dxl:mt-28 2xl:w-100 2xl:h-116 2xl:mt-32 4xl:w-132 4xl:h-152 4xl:mt-40" src={hummusPlate} alt="leftPlate"/> 
+                <img className="hidden object-contain lg:block lg:w-72 lg:h-84 lg:mt-20 xl:w-88 xl:h-100 xl:mt-28 dxl:w-92 dxl:h-104 dxl:mt-28 2xl:w-100 2xl:h-116 2xl:mt-32 4xl:w-132 4xl:h-152 4xl:mt-40" src='' alt="leftPlate"/> 
                 
-                <img className="object-cover w-160 h-160 md:mx-16  lg:object-contain  lg:w-112 lg:h-108 lg:mt-12 lg:mx-0 xl:w-144 xl:h-144 xl:mt-16 dxl:w-148 dxl:h-148 2xl:w-160 2xl:h-160 2xl:mt-20 4xl:w-212 4xl:h-212 4xl:mt-24" src={zestawPlate} alt="centerPlate"/>
+                <img className="object-cover w-160 h-160 md:mx-16  lg:object-contain  lg:w-112 lg:h-108 lg:mt-12 lg:mx-0 xl:w-144 xl:h-144 xl:mt-16 dxl:w-148 dxl:h-148 2xl:w-160 2xl:h-160 2xl:mt-20 4xl:w-212 4xl:h-212 4xl:mt-24" src='' alt="centerPlate"/>
                 
-                <img className="hidden object-contain lg:block lg:w-72 lg:h-84 xl:w-88 xl:h-104 2xl:w-100 2xl:h-116 4xl:w-132 4xl:h-152" src={mutabalPlate} alt="rightPlate"/> 
+                <img className="hidden object-contain lg:block lg:w-72 lg:h-84 xl:w-88 xl:h-104 2xl:w-100 2xl:h-116 4xl:w-132 4xl:h-152" src='' alt="rightPlate"/> 
             </div> 
         </div>
 

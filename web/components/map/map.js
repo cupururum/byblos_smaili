@@ -16,7 +16,7 @@ function Map(props) {
         if (!window.google) {
             const scriptElement = document.createElement('script');
             scriptElement.type = 'text/javascript';
-            scriptElement.src = `https://maps.google.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}`;
+            scriptElement.src = `https://maps.google.com/maps/api/js?key=AIzaSyBiy5kRlv24Mv43HzXGlfs06D6HonBE3Fs`;
             const getScriptElement = document.getElementsByTagName('script')[0];
             getScriptElement.parentNode.insertBefore(scriptElement, getScriptElement);
             

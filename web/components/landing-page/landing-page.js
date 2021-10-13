@@ -43,6 +43,8 @@ function LandingPage(props){
                                     name="booking" 
                                     method="post"
                                     action="/success"
+                                    netlify-honeypot="bot-field"
+                                    data-netlify-recaptcha="true"
                                     data-netlify="true">
                                 
                                     <input type="hidden" name="form-name" value="booking"  />
@@ -68,7 +70,7 @@ function LandingPage(props){
                                     <button className="w-56 h-16 mt-10 bg-white-coffee text-buttonJumbotron font-bold focus:outline-none lg:hover:bg-btn-color-hover" type="submit">
                                             Rezerwacja
                                     </button>
-
+                                    <div data-netlify-recaptcha="true"></div>
                                 </form>
                             </div>
                         </div>

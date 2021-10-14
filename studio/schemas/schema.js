@@ -9,6 +9,7 @@ import navigation from './navigation'
 import menu from './menu'
 import menuSection from './menuSection'
 import menuItem from './menuItem'
+import imageAboutSection from './imageAboutSection'
 
 import externalLink from './externalLinks'
 
@@ -25,6 +26,7 @@ export default createSchema({
     menuSection,
     menuItem,
     menu,
-    externalLink
+    externalLink,
+    imageAboutSection
   ]),
 })

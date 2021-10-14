@@ -5,6 +5,7 @@ import Logistics from '../logistics/logistics'
 import ExternalLinks from '../external-links/external-links'
 
 function LandingPage(props){
+    
    return (
        <>
            <Hero/>
@@ -78,7 +79,7 @@ function LandingPage(props){
                 <p className="text-dark-grey mt-5 text-cookiesPolicyLink md:w-80 xl:mt-10 4xl:w-100 4xl:mt-5 ">
                     Przez kliknecie przycisku “Rezerwacja” zgadzają się Państwo na przetwarzanie Państwa danych.
                 </p>
-                <About/>
+                <About aboutPics={props.aboutPics}/>
                 <ExternalLinks linksAndLogos={props.linksAndLogos}/>
            </div>
        </>

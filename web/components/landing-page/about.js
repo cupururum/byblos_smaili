@@ -1,12 +1,9 @@
-
+import Image from 'next/image'
 import Link from 'next/link'
 
-import byblosInside from './assets/pictures/byblosInterior.png'
-import byblosInsideCloserLook from './assets/pictures/byblosInteriorCloserLook.png'
-import byblosInsideWindows from './assets/pictures/byblosInteiorLookOutside.png'
-import byblosInsideExit from './assets/pictures/byblosInsideExit.png'
 
-function About() {
+function About(props) {
+
     return (
         <div className="mt-24 lg:flex lg:justify-between lg:mt-16 lg:mb-32 lg:px-0 xl:mb-40 ">
             <div className="lg:w-108 lg:mr-10 iPadPro11:w-88 xl:w-5/12 xl:mr-10 4xl:mr-20 ">
@@ -36,10 +33,10 @@ function About() {
                 </Link>
             </div>
             <div className="hidden lg:grid lg:grid-cols-1 lg:gap-8 lg:w-124 lg:h-80 lg:mt-12 xl:grid-cols-2 xl:w-7/12 xl:gap-6 xl:mt-10">
-                <div><img src={byblosInside} alt="Byblos Inside"/></div>
-                <div className="hidden xl:block"><img src={byblosInsideCloserLook} alt="Byblos Inside Closer Look"/></div>
-                <div><img src={byblosInsideWindows} alt="Byblos Inside Windows"/></div>
-                <div className="hidden xl:block"><img src={byblosInsideExit} alt="Byblos Inside Exit"/></div>
+                <div><Image src={props.aboutPics[0].imageAbt.asset.url} alt={props.aboutPics[0].alt} width={514} height={320}/></div>
+                <div className="hidden xl:block"><Image src={props.aboutPics[1].imageAbt.asset.url} alt={props.aboutPics[1].alt} width={514} height={320}/></div>
+                <div><Image src={props.aboutPics[2].imageAbt.asset.url} alt={props.aboutPics[2].alt} width={514} height={320}/></div>
+                <div className="hidden xl:block"><Image src={props.aboutPics[3].imageAbt.asset.url} alt={props.aboutPics[2].alt} width={514} height={320}/></div>
             </div>
         </div>
     )

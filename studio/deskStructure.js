@@ -26,8 +26,13 @@ export default () =>
         .schemaType('navigation')
         .child(S.documentTypeList('navigation').title("Navigation")),
 
+        S.listItem()
+        .title('Images In About Section')
+        .schemaType('imageAboutSection')
+        .child(S.documentTypeList('imageAboutSection').title("Image In About Us")),
+
       S.listItem()
-        .title('Exturnal Links')
+        .title('External Links')
         .schemaType('externalLink')
         .child(S.documentTypeList('externalLink').title("External Link")),
 

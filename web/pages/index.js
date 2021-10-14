@@ -1,13 +1,12 @@
-import {Fragment} from 'react'
 
 import {sanityClient} from '../lib/sanity.server'
 import LandingPage from '../components/landing-page/landing-page'
 
-function IndexPage(props) {
 
+function IndexPage(props) {
   return (
     <div>
-     <LandingPage linksAndLogos={props.linksAndLogos}/> 
+      <LandingPage linksAndLogos={props.linksAndLogos} aboutPics={props.aboutPic}/> 
     </div>
   )
 }
@@ -15,20 +14,34 @@ function IndexPage(props) {
 export default IndexPage;
 
 export async function getStaticProps() {
-  const linksAndLogos = await sanityClient.fetch(`
-  *[_type == "externalLink"]{
-      title,
-      _id,
-      href,
-      alt,
-      imgCards{
-         asset->{
-            url
-         }
-      }
-  }`)
+  
+  
+    const [ aboutPic, linksAndLogos ] = await Promise.all([
+      sanityClient.fetch(`
+                          *[_type == "imageAboutSection"]{
+                            alt,
+                            imageAbt{
+                              asset->{
+                                  url
+                              }
+                            }
+                        }`),
+       sanityClient.fetch(`
+                                *[_type == "externalLink"]{
+                                    title,
+                                    _id,
+                                    href,
+                                    alt,
+                                    imgCards{
+                                      asset->{
+                                          url
+                                      }
+                                    }
+                                }`)
+    ])
+
   return {
-    props: {linksAndLogos},
+    props: { aboutPic, linksAndLogos },
 
   }
 }

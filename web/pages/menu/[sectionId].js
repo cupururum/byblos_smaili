@@ -1,6 +1,6 @@
 import {groq} from 'next-sanity'
 import {getClient} from '../../lib/sanity.server'
-import Link from 'next/link'
+
 
 import Navigation from '../../components/menu/navigation'
 import MenuItemsGrid from '../../components/menu/menu-items-grid'
@@ -9,6 +9,14 @@ import MenuItemsGrid from '../../components/menu/menu-items-grid'
 
 
 function MenuSection(props){
+
+    if (!props.menu || !props.menuSectionId) {
+        return (
+          <div className="center">
+            <p>Loading...</p>
+          </div>
+        );
+      }
 
     return(
         <div className="px-7 pt-44 mb-36 xsm:px-10 lg:flex lg:justify-between lg:px-0">

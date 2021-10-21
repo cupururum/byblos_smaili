@@ -5,6 +5,14 @@ import LandingPage from '../components/landing-page/landing-page'
 
 
 function IndexPage(props) {
+
+  if (!props.landingPageImgAssets) {
+    return (
+      <div className="center">
+        <p>Loading...</p>
+      </div>
+    );
+  }
   return (
     <div>
       <LandingPage linksAndLogos={ props.landingPageImgAssets.externalLink } landingPageImgs={ props.landingPageImgAssets.landingPageImg[0] } />

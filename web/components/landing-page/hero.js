@@ -1,9 +1,11 @@
-import React from 'react';
+import Link from 'next/link'
 
 import Logistics from '../logistics/logistics';
 
 
-function Hero() {
+
+
+function Hero(props) {
     return (
         <div className="bg-romance pt-28">
             
@@ -19,13 +21,13 @@ function Hero() {
                 <button className="w-56 h-16 mb-5 border-2 border-black text-buttonJumbotron font-bold focus:outline-none lg:hover:bg-btn-color-hover lg:hover:border-0 md:mr-5 4xl:mr-10">
                         Rezerwacja
                 </button>
-                <button className="w-56 h-16 text-buttonJumbotron font-bold bg-white focus:outline-none lg:hover:bg-btn-color-hover ">
+                <Link href='#orderOnline'><button className="w-56 h-16 text-buttonJumbotron font-bold bg-white focus:outline-none lg:hover:bg-btn-color-hover ">
                         Zamów online
-                </button>
+                </button></Link>
             </div>
             <div className="flex justify-between h-132 lg:h-88 xl:h-132 dxl:h-136 2xl:h-148 3xl:h-152 4xl:h-196">
             
-                <img className="hidden object-contain lg:block lg:w-72 lg:h-84 lg:mt-20 xl:w-88 xl:h-100 xl:mt-28 dxl:w-92 dxl:h-104 dxl:mt-28 2xl:w-100 2xl:h-116 2xl:mt-32 4xl:w-132 4xl:h-152 4xl:mt-40" src='' alt="leftPlate"/> 
+                <img className="hidden object-contain lg:block lg:w-72 lg:h-84 lg:mt-20 xl:w-88 xl:h-100 xl:mt-28 dxl:w-92 dxl:h-104 dxl:mt-28 2xl:w-100 2xl:h-116 2xl:mt-32 4xl:w-132 4xl:h-152 4xl:mt-40" src='' alt="hummus" width={653} height={600}/> 
                 
                 <img className="object-cover w-160 h-160 md:mx-16  lg:object-contain  lg:w-112 lg:h-108 lg:mt-12 lg:mx-0 xl:w-144 xl:h-144 xl:mt-16 dxl:w-148 dxl:h-148 2xl:w-160 2xl:h-160 2xl:mt-20 4xl:w-212 4xl:h-212 4xl:mt-24" src='' alt="centerPlate"/>
                 

@@ -1,12 +1,13 @@
-
-import {sanityClient} from '../lib/sanity.server'
+import {groq} from 'next-sanity'
+import {getClient} from '../lib/sanity.server'
 import LandingPage from '../components/landing-page/landing-page'
+
 
 
 function IndexPage(props) {
   return (
     <div>
-      <LandingPage linksAndLogos={props.linksAndLogos} aboutPics={props.aboutPic}/> 
+      <LandingPage linksAndLogos={ props.landingPageImgAssets.externalLink } landingPageImgs={ props.landingPageImgAssets.landingPageImg[0] } />
     </div>
   )
 }
@@ -16,32 +17,29 @@ export default IndexPage;
 export async function getStaticProps() {
   
   
-    const [ aboutPic, linksAndLogos ] = await Promise.all([
-      sanityClient.fetch(`
-                          *[_type == "imageAboutSection"]{
-                            alt,
-                            imageAbt{
-                              asset->{
-                                  url
-                              }
-                            }
-                        }`),
-       sanityClient.fetch(`
-                                *[_type == "externalLink"]{
-                                    title,
-                                    _id,
-                                    href,
-                                    alt,
-                                    imgCards{
-                                      asset->{
-                                          url
-                                      }
-                                    }
-                                }`)
-    ])
+    const landingPageImgAssets  = await getClient().fetch(groq`
+    {
+      'externalLink': *[_type == 'externalLink']{
+      title,
+      _id,
+      href,
+      alt,
+      imgCards{
+        asset->{
+            url
+        }
+      }
+    },
+    'landingPageImg': *[_type == 'landingPageImg']{
+      heroImg[]{_key, alt, asset->{url}},
+      aboutImg[]{_key, alt, asset->{url}}
+    }
+  }
+    `)
+      
 
   return {
-    props: { aboutPic, linksAndLogos },
+    props: { landingPageImgAssets }
 
   }
 }

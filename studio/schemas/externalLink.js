@@ -1,5 +1,5 @@
 export default {
-    title: 'External Links',
+    title: 'External Link',
     name: 'externalLink',
     type: 'document',
     fields: [

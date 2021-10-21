@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 function About(props) {
 
+
     return (
         <div className="mt-24 lg:flex lg:justify-between lg:mt-16 lg:mb-32 lg:px-0 xl:mb-40 ">
             <div className="lg:w-108 lg:mr-10 iPadPro11:w-88 xl:w-5/12 xl:mr-10 4xl:mr-20 ">
@@ -33,11 +34,9 @@ function About(props) {
                 </Link>
             </div>
             <div className="hidden lg:grid lg:grid-cols-1 lg:gap-8 lg:w-124 lg:h-80 lg:mt-12 xl:grid-cols-2 xl:w-7/12 xl:gap-6 xl:mt-10">
-                <div><Image src={props.aboutPics[0].imageAbt.asset.url} alt={props.aboutPics[0].alt} width={514} height={320}/></div>
-                <div className="hidden xl:block"><Image src={props.aboutPics[1].imageAbt.asset.url} alt={props.aboutPics[1].alt} width={514} height={320}/></div>
-                <div><Image src={props.aboutPics[2].imageAbt.asset.url} alt={props.aboutPics[2].alt} width={514} height={320}/></div>
-                <div className="hidden xl:block"><Image src={props.aboutPics[3].imageAbt.asset.url} alt={props.aboutPics[2].alt} width={514} height={320}/></div>
+                {props.aboutImgs.map(image => <div key={image._key}><img src={image.asset.url} alt={image.alt}/></div>)}
             </div>
+           
         </div>
     )
 }

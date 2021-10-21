@@ -5,13 +5,14 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 import socialCard from './socialCard'
+import externalLink from './externalLink'
 import navigation from './navigation' 
 import menu from './menu'
 import menuSection from './menuSection'
 import menuItem from './menuItem'
 import imageAboutSection from './imageAboutSection'
+import landingPageImg from './landingPageImg'
 
-import externalLink from './externalLinks'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,6 +28,8 @@ export default createSchema({
     menuItem,
     menu,
     externalLink,
-    imageAboutSection
+    imageAboutSection,
+    landingPageImg,
+
   ]),
 })

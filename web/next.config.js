@@ -10,5 +10,14 @@ const STUDIO_REWRITE = {
     rewrites: () => [STUDIO_REWRITE],
     images: {
       domains: ['cdn.sanity.io']
+    },
+    async redirects() {
+      return [
+        {
+          source: '/menu',
+          destination: '/menu/kanapki',
+          permanent: true,
+        }
+      ]
     }
   };

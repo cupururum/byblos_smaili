@@ -26,10 +26,15 @@ export default () =>
         .schemaType('navigation')
         .child(S.documentTypeList('navigation').title("Navigation")),
 
-        S.listItem()
+    S.listItem()
         .title('Images In About Section')
         .schemaType('imageAboutSection')
         .child(S.documentTypeList('imageAboutSection').title("Image In About Us")),
+
+      S.listItem()
+        .title('Images On Landing Page')
+        .schemaType('landingPageImg')
+        .child(S.documentTypeList('landingPageImg').title("Images On Landing Page")),
 
       S.listItem()
         .title('External Links')
@@ -52,25 +57,11 @@ export default () =>
             S.listItem()
               .title('Menu Item')
               .schemaType('menuItem')
-              .child(S.documentTypeList('menuItem').title('Menu Items')),
-
-            S.listItem()
-              .title('Menu items by menu section')
-              .child(
-                // List out the categories
-                S.documentTypeList('menuSection')
-                  .title('Menu items by menu section')
-                  // When a category is selected, pass its id down to the next pane
-                  .child(menuSectionId =>
-                    S.documentList()
-                      .title('Menu Items')
-                      .filter('_type == "menuItem" && $menuSectionId in menuSection[]._ref')
-                      .params({menuSectionId})
-                  )
-              )     
+              .child(S.documentTypeList('menuItem').title('Menu Items'))   
  
           ])
         )
         
     
     ])
+    

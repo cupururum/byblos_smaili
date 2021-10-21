@@ -20,13 +20,18 @@ export default {
         }
       },
       {
-        title: 'Menu',
-        name: 'menu',
-        type: 'reference',
-        to: [
-          {type: 'menu'},
+        title: 'Menu Items',
+        name: 'menuItems',
+        type: 'array',
+        of: [
+          {
+            type: 'menuItem'
+          },
+          {
+            type: 'reference',
+            to: {type: 'menuItem'}
+          }
         ]
       }
-  
     ]
   }

@@ -5,10 +5,13 @@ import Logistics from '../logistics/logistics'
 import ExternalLinks from '../external-links/external-links'
 
 function LandingPage(props){
-    
+   const aboutImg = props.landingPageImgs.aboutImg
+   const heroImg = props.landingPageImgs.heroImg
+
+
    return (
        <>
-           <Hero/>
+           <Hero images={heroImg}/>
            <div className="mt-44 px-7 xsm:px-10 md:mt-36 lg:px-20 lg:mt-32 lg:mb-20 xl:px-24 xl:mt-40 4xl:px-36 4xl:mt-60 ">
                 <Logistics textStyle="text-bodytextAdress md:hidden"
                               extraText="Warsawa,"
@@ -79,7 +82,7 @@ function LandingPage(props){
                 <p className="text-dark-grey mt-5 text-cookiesPolicyLink md:w-80 xl:mt-10 4xl:w-100 4xl:mt-5 ">
                     Przez kliknecie przycisku “Rezerwacja” zgadzają się Państwo na przetwarzanie Państwa danych.
                 </p>
-                <About aboutPics={props.aboutPics}/>
+                <About aboutImgs={aboutImg}/>
                 <ExternalLinks linksAndLogos={props.linksAndLogos}/>
            </div>
        </>

@@ -13,8 +13,6 @@ function MenuSection(props){
     const { menu, menuSectionId } = props 
     const { menuItems, menuSections } = menu
 
-    console.log(menuItems)
-
     return(
         <div className="px-7 pt-44 mb-36 xsm:px-10 lg:flex lg:justify-between lg:px-0">
             <div className="lg:w-1/12"></div>

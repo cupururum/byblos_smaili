@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 function NavigationItem(props) {
     const {title, slug, activeSection} = props
-    console.log(activeSection, title)
     return (
         <>
             { title.toLowerCase() == activeSection ? 

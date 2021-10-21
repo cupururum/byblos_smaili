@@ -10,16 +10,13 @@ import MenuItemsGrid from '../../components/menu/menu-items-grid'
 
 function MenuSection(props){
 
-    const { menu, menuSectionId } = props 
-    const { menuItems, menuSections } = menu
-
     return(
         <div className="px-7 pt-44 mb-36 xsm:px-10 lg:flex lg:justify-between lg:px-0">
             <div className="lg:w-1/12"></div>
             <div className="lg:w-4/12 xl:w-3/12">
-                <Navigation menuSections={menuSections} activeSection={menuSectionId}/>
+                <Navigation menuSections={props.menu.menuSections} activeSection={props.menuSectionId}/>
             </div>
-            <div className="lg:w-6/12 xl:w-6/12 2xl:w-7/12"><MenuItemsGrid menuItems={menuItems}/></div>
+            <div className="lg:w-6/12 xl:w-6/12 2xl:w-7/12"><MenuItemsGrid menuItems={props.menu.menuItems}/></div>
             <div className="lg:w-1/12"></div>
         </div>
     )

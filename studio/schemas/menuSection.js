@@ -25,9 +25,6 @@ export default {
         type: 'array',
         of: [
           {
-            type: 'menuItem'
-          },
-          {
             type: 'reference',
             to: {type: 'menuItem'}
           }

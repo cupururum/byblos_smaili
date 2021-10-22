@@ -53,12 +53,15 @@ function Layout(props) {
   }, [])
 
     return (
-      <div className='font-serif'>
-        {isNavigationShouldBeVisible && <NavigationMain linksAndLogos={linksAndLogos} navItems={navItems} onClick={crossOnClick}/>}
-        { !isNavigationShouldBeVisible && <Sandwich onClick={menuSandwichOnClick}/> }
-        <Header navItems={navItems}/>
-          <main>{props.children}</main>
-        <Footer linksAndLogos={linksAndLogos}/>
+      <div className='min-h-full font-serif'>
+       
+          {isNavigationShouldBeVisible && <NavigationMain linksAndLogos={linksAndLogos} navItems={navItems} onClick={crossOnClick}/>}
+          { !isNavigationShouldBeVisible && <Sandwich onClick={menuSandwichOnClick}/> }
+          <Header navItems={navItems}/>
+            <main>{props.children}</main>
+          
+            <Footer linksAndLogos={linksAndLogos}/>
+          
       </div>
     ) 
     

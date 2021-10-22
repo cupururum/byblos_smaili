@@ -156,7 +156,8 @@ module.exports = {
       translate: ['group-focus'],
       transitionDuration: ['focus', 'group-focus'],
       transitionProperty: ['focus', 'group-focus'],
-      opacity: ['group-focus']
+      opacity: ['group-focus'],
+      transform: [ 'focus', 'group-focus'],
     }
   },
   plugins: [],

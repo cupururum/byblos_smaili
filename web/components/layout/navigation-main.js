@@ -12,7 +12,7 @@ function NavigationMain(props){
     const { navItems } = props
 
     return (
-        <div className="w-full h-full fixed inset-x-0 top-0 z-10 bg-romance overflow-scroll lg:px-16 xl:pl-24 4xl:px-40">
+        <div className="w-full h-full fixed inset-x-0 top-0 z-20 bg-romance overflow-scroll lg:px-16 xl:pl-24 4xl:px-40">
            <div className="flex justify-between px-10 pt-20 mb-8 xl:px-0  ">
                 <Link href="/"><a > <ByblosLogo/></a></Link>
                <button className="focus:outline-none" onClick={props.onClick}>
@@ -21,7 +21,7 @@ function NavigationMain(props){
            </div>
            <div className="flex flex-col  space-y-7 pt-8 px-10 text-openNavTextMobile  xsm:space-y-10 md:text-openNavTextDesktop lg:space-y-16  xl:space-y-0 xl:px-0 xl:grid xl:grid-cols-3 xl:grid-flow-row xl:place-items-start xl:w-full xl:h-60  4xl:mr-144 4xl:mt-36">
                 {navItems.map((item) => 
-                        <div className="text-center xl:hover:underline" key={item._id}> 
+                        <div className="text-center xl:hover:underline" key={item._id} onClick={props.onClick}> 
                             <Link href={`/${item.slug.current}`}>{item.title}</Link>
                         </div>
                     )}

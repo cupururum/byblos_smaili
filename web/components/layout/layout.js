@@ -10,12 +10,12 @@ function Layout(props) {
 
   const [isNavigationShouldBeVisible, setNavigationVisible] = useState(false)
 
-  function menuSandwichOnClick () {
+  function showNavMain () {
     setNavigationVisible(true)
     
   }
 
-  function crossOnClick () {
+  function hideNavMain () {
     setNavigationVisible(false)
   }
 
@@ -55,8 +55,8 @@ function Layout(props) {
     return (
       <div className='min-h-full font-serif'>
        
-          {isNavigationShouldBeVisible && <NavigationMain linksAndLogos={linksAndLogos} navItems={navItems} onClick={crossOnClick}/>}
-          { !isNavigationShouldBeVisible && <Sandwich onClick={menuSandwichOnClick}/> }
+          {isNavigationShouldBeVisible && <NavigationMain linksAndLogos={linksAndLogos} navItems={navItems} onClick={hideNavMain}/>}
+          { !isNavigationShouldBeVisible && <Sandwich onClick={showNavMain}/> }
           <Header navItems={navItems}/>
             <main>{props.children}</main>
           

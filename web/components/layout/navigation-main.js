@@ -1,7 +1,5 @@
 import Link from 'next/link'
 
-import NavbarItems from './navbar-items'
-
 import Cross from './svg/cross'
 import ByblosLogo from './svg/byblos-logo.js'
 

@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { sanityClient } from "../../lib/sanity.server";
 
 import Header from './header'
@@ -53,7 +53,7 @@ function Layout(props) {
   }, [])
 
     return (
-      <div className='min-h-full font-serif'>
+      <div className='min-h-full font-serif lg:relative'>
        
           {isNavigationShouldBeVisible && <NavigationMain linksAndLogos={linksAndLogos} navItems={navItems} onClick={hideNavMain}/>}
           { !isNavigationShouldBeVisible && <Sandwich onClick={showNavMain}/> }

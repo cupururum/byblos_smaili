@@ -26,7 +26,7 @@ function filterDataToSingleItem(data, preview) {
 
 function MenuSection({data, preview}){
 
-    if (!data.menu || !data.menuSectionId) {
+    if (!data) {
         return (
           <div className="center">
             <p>Loading...</p>
@@ -44,7 +44,6 @@ function MenuSection({data, preview}){
       })
 
       const page = filterDataToSingleItem(previewData, preview)
-      console.log(page)
     
 
 

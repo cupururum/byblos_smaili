@@ -1,7 +1,7 @@
 // ./studio/resolveProductionUrl.js
 
 // Any random string, must match SANITY_PREVIEW_SECRET in the Next.js .env.local file
-const previewSecret = 'catscatscats'
+const previewSecret = "catscatscats"
 
 // Replace `remoteUrl` with your deployed Next.js site
 const remoteUrl = `https://byblos-prod.sanity.studio/`

@@ -1,15 +1,44 @@
 import {groq} from 'next-sanity'
 import {getClient} from '../../lib/sanity.server'
+import {usePreviewSubscription} from '../../lib/sanity'
 import useWindowSize from '../api/useWindowSize'
 
 import Navigation from '../../components/menu/navigation'
 import MenuItemsGrid from '../../components/menu/menu-items-grid'
 import NavigationMobile from '../../components/menu/navigation-mobile'
 
+function filterDataToSingleItem(data, preview) {
+    if (!Array.isArray(data)) {
+      return data
+    }
+  
+    if (data.length === 1) {
+      return data[0]
+    }
+  
+    if (preview) {
+      return data.find((item) => item._id.startsWith(`drafts.`)) || data[0]
+    }
+  
+    return data[0]
+  }
 
-function MenuSection(props){
 
-    if (!props.menu || !props.menuSectionId) {
+function MenuSection({data, preview}){
+
+    const {data: previewData} = usePreviewSubscription(data?.query, {
+        params: data?.menuSectionId ?? {},
+        // The hook will return this on first render
+        // This is why it's important to fetch *draft* content server-side!
+        initialData: data?.menu,
+        // The passed-down preview context determines whether this function does anything
+        enabled: preview,
+      })
+
+      const page = filterDataToSingleItem(previewData, preview)
+      console.log(page)
+    
+    if (!data.menu || !data.menuSectionId) {
         return (
           <div className="center">
             <p>Loading...</p>
@@ -22,8 +51,8 @@ function MenuSection(props){
     if (windowSize.width < 780 ) {
         return (
             <div className="px-7 pt-44 mb-36 min-h-full">
-                <NavigationMobile menuSections={props.menu.menuSections} activeSection={props.menuSectionId}/>
-                <MenuItemsGrid menuItems={props.menu.menuItems}/>
+                <NavigationMobile menuSections={page.menuSections} activeSection={data.menuSectionId}/>
+                <MenuItemsGrid menuItems={data.menu.menuItems}/>
             </div>
         )
     }
@@ -32,9 +61,9 @@ function MenuSection(props){
         <div className="px-7 pt-44 mb-36 xsm:px-10 lg:flex lg:justify-between lg:px-0">
             <div className="lg:w-1/12"></div>
             <div className="lg:w-5/12 xl:w-3/12">
-                <Navigation menuSections={props.menu.menuSections} activeSection={props.menuSectionId}/>
+                <Navigation menuSections={page.menuSections} activeSection={data.menuSectionId}/>
             </div>
-            <div className="lg:w-5/12 xl:w-6/12 2xl:w-7/12"><MenuItemsGrid menuItems={props.menu.menuItems}/></div>
+            <div className="lg:w-5/12 xl:w-6/12 2xl:w-7/12"><MenuItemsGrid menuItems={data.menu.menuItems}/></div>
             <div className="lg:w-1/12"></div>
         </div>
     )
@@ -42,9 +71,9 @@ function MenuSection(props){
 
 export default MenuSection
 
-export async function getStaticProps(context){
-    const menuSectionId = context.params.sectionId
-    const menu = await getClient().fetch(
+export async function getStaticProps({params, preview = false }){
+    const menuSectionId = params.sectionId
+    const menu = await getClient(preview).fetch(
         groq`{
             "menuItems": *[_type == 'menuItem' && references(*[_type=="menuSection" && slug.current == '${menuSectionId}']._id)]{
                 _id,
@@ -69,10 +98,18 @@ export async function getStaticProps(context){
         }`
     )
 
+    if (!menu) return {notFound: true}
+
+    const page = filterDataToSingleItem(menu.menuSections, preview)
+
     
 
     return {
-        props: { menu, menuSectionId }
+       
+        props: {  
+            preview,
+            data: { page, menu, menuSectionId }
+        }
     }
 }
 
@@ -94,7 +131,7 @@ export async function getStaticPaths() {
     ))
     return {                   
       paths: paths,
-      fallback: false,
+      fallback: true,
     }
   }
 

@@ -18,7 +18,7 @@ function NavigationMobile(props){
                 <NavigationMobileActiveItem activeSection={props.activeSection} onClick={handleNavOnClick}/>
                 { navOpen && 
                         <div className="abosute origin-top-right absolute right-0 w-full z-10 bg-white">
-                           { props.menuSections.map((section) => 
+                           { props.menuSections.filter(section => section.title.toLowerCase() !== props.activeSection ).map((section) => 
                                     <NavigationMobileItem key={section._id}
                                                           title={section.title}
                                                           slug={section.slug.current}

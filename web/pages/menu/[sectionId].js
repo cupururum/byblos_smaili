@@ -26,6 +26,14 @@ function filterDataToSingleItem(data, preview) {
 
 function MenuSection({data, preview}){
 
+    if (!data.menu || !data.menuSectionId) {
+        return (
+          <div className="center">
+            <p>Loading...</p>
+          </div>
+        );
+      }
+
     const {data: previewData} = usePreviewSubscription(data?.query, {
         params: data?.menuSectionId ?? {},
         // The hook will return this on first render
@@ -38,13 +46,7 @@ function MenuSection({data, preview}){
       const page = filterDataToSingleItem(previewData, preview)
       console.log(page)
     
-    if (!data.menu || !data.menuSectionId) {
-        return (
-          <div className="center">
-            <p>Loading...</p>
-          </div>
-        );
-      }
+
 
     const windowSize = useWindowSize()
 

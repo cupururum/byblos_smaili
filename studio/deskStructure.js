@@ -26,6 +26,11 @@ export default () =>
         .schemaType('navigation')
         .child(S.documentTypeList('navigation').title("Navigation")),
 
+        S.listItem()
+        .title('Gallery for Pages')
+        .schemaType('galleryPage')
+        .child(S.documentTypeList('galleryPage').title("Gallery Page")),
+
     S.listItem()
         .title('Images In About Section')
         .schemaType('imageAboutSection')

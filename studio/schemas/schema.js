@@ -12,7 +12,8 @@ import menuSection from './menuSection'
 import menuItem from './menuItem'
 import imageAboutSection from './imageAboutSection'
 import landingPageImg from './landingPageImg'
-
+import gallery from './objects/gallery'
+import galleryPage from './galleryPage'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -30,6 +31,8 @@ export default createSchema({
     externalLink,
     imageAboutSection,
     landingPageImg,
+    galleryPage,
+    gallery
 
   ]),
 })

@@ -18,10 +18,10 @@ function ViewMode(props){
     return (
         <div className="fixed z-10 w-full h-full bg-black bg-opacity-80">
             <div className="absolute z-20 right-10 top-10 " onClick={props.crossOnClickViewMode}> <WhiteCrossIcon/> </div>
-            <div className="md:flex md:justify-between w-full h-full">
+            <div className="md:grid md:grid-cols-3 md:place-items-center mt-64">
                     {slider && (
                      
-                            <div className="absolute z-20 left-0 bottom-112  xsm:bottom-88 md:static md:self-center">
+                            <div className="absolute z-20 left-0 bottom-112  xsm:bottom-88 md:static md:place-self-start">
                                 <ArrowLeft
                                 onClick={(e) => e.stopPropagation() || slider.prev()}
                                 />
@@ -29,13 +29,13 @@ function ViewMode(props){
                   
                         )}
   
-                    <div ref={sliderRef} className="keen-slider">
-                        {props.images.map((image) => <div className="keen-slider__slide flex justify-center" key={image._key}><img className="self-center" src={image.asset.url} alt={image.alt}/></div>)}
+                    <div ref={sliderRef} className="keen-slider h-auto w-auto place-self-center">
+                        {props.images.map((image) => <div className="keen-slider__slide  " key={image._key}><img className="w-full h-full" src={image.asset.url} alt={image.alt}/></div>)}
                     </div>
 
                     {slider && (
                
-                            <div className="absolute z-20 right-0 bottom-112   xsm:bottom-88 md:static md:self-center">
+                            <div className="absolute z-20 right-0 bottom-112   xsm:bottom-88 md:static md:place-self-end">
                                 <ArrowRight
                                 onClick={(e) => e.stopPropagation() || slider.next()}
                                 />

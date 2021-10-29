@@ -56,7 +56,7 @@ function Gallery({data, preview}){
         enabled: preview,
       })
       const page = filterDataToSingleItem(previewData, preview)
-     console.log(page)
+    
 
      const windowSize = useWindowSize()
 
@@ -73,13 +73,11 @@ function Gallery({data, preview}){
      }
     
     return(
-        <div className="">
+        <>
             {isVewModeActive && <ViewMode images={page.galleryMobile.images} crossOnClickViewMode={crossOnClickViewMode}/>} 
             {displayGallery}
-             <div className="w-64 h-64 bg-black group flex justify-center hover:opacity-75">
-                <div className="w-10 h-10 bg-red-400 self-center opacity-0 group-hover:opacity-100"></div>
-            </div>
-        </div>
+             
+        </>
        
     )
 }

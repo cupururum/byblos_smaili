@@ -8,6 +8,7 @@
     "sanity": "cd .. && cd studio && sanity start"
   },
   "dependencies": {
+    "keen-slider": "^5.5.1",
     "next": "latest",
     "next-sanity": "^0.4.0",
     "react": "^17.0.2",

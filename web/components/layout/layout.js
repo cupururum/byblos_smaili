@@ -53,7 +53,7 @@ function Layout(props) {
   }, [])
 
     return (
-      <div className='min-h-full font-serif lg:relative'>
+      <div className='min-h-full font-serif '>
        
           {isNavigationShouldBeVisible && <NavigationMain linksAndLogos={linksAndLogos} navItems={navItems} onClick={hideNavMain}/>}
           { !isNavigationShouldBeVisible && <Sandwich onClick={showNavMain}/> }

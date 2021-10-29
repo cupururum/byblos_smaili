@@ -1,7 +1,7 @@
 import {groq} from 'next-sanity'
 import {getClient} from '../../lib/sanity.server'
 import {usePreviewSubscription} from '../../lib/sanity'
-import useWindowSize from '../api/useWindowSize'
+import useWindowSize from '../../hooks/useWindowSize'
 
 import Navigation from '../../components/menu/navigation'
 import MenuItemsGrid from '../../components/menu/menu-items-grid'

@@ -1,7 +1,7 @@
-function GalleryTablet(props) {
+function GalleryDesktop(props) {
     return(
         
-            <div className="grid grid-cols-2  gap-2">
+            <div className="grid grid-cols-4  gap-4">
                 {props.images.map((image) =>
                     <div className={`${image.display}`} key={image._key}>
                         <img className="w-full h-full" src={image.asset.url} alt={image.alt} onClick={props.clickOnImage}/>
@@ -13,4 +13,4 @@ function GalleryTablet(props) {
 
 }
 
-export default GalleryTablet
+export default GalleryDesktop

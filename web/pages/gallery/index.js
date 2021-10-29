@@ -74,6 +74,12 @@ function Gallery({data, preview}){
     
     return(
         <>
+            <div className="grid grid-cols-4">
+                <div className="row-span-2 col-span-2"></div>
+                <div className="row-span-1 col-span-1"></div>
+                <div className="row-span-1 col-span-2"></div>
+                <div className="row-span-2 col-span-1"></div>
+            </div>
             {isVewModeActive && <ViewMode images={page.galleryMobile.images} crossOnClickViewMode={crossOnClickViewMode}/>} 
             {displayGallery}
              

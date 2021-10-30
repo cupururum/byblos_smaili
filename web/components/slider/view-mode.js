@@ -18,24 +18,25 @@ function ViewMode(props){
     return (
         <div className="fixed z-10 w-full h-full bg-black bg-opacity-80">
             <div className="absolute z-20 right-10 top-10 " onClick={props.crossOnClickViewMode}> <WhiteCrossIcon/> </div>
-            <div className="md:grid md:grid-cols-3 md:place-items-center mt-64">
+            <div className="md:grid md:grid-cols-6 lg:grid-cols-5 md:place-items-center  mt-28 xsm:mt-0  md:mt-40">
                     {slider && (
                      
-                            <div className="absolute z-20 left-0 bottom-112  xsm:bottom-88 md:static md:place-self-start">
+                            <div className="absolute z-20 left-0 bottom-88  xsm:bottom-88 md:static">
                                 <ArrowLeft
                                 onClick={(e) => e.stopPropagation() || slider.prev()}
                                 />
                             </div>
                   
                         )}
-  
-                    <div ref={sliderRef} className="keen-slider h-auto w-auto place-self-center">
-                        {props.images.map((image) => <div className="keen-slider__slide  " key={image._key}><img className="w-full h-full" src={image.asset.url} alt={image.alt}/></div>)}
+                    <div className="md:col-span-4 lg:col-span-3  ">
+                        <div ref={sliderRef} className="keen-slider place-self-center">
+                            {props.images.map((image) => <div className="keen-slider__slide  flex items-center md:justify-center " key={image._key}><div classNAme=" "><img className="" src={image.asset.url} alt={image.alt}/></div></div>)}
+                        </div>
                     </div>
 
                     {slider && (
                
-                            <div className="absolute z-20 right-0 bottom-112   xsm:bottom-88 md:static md:place-self-end">
+                            <div className="absolute z-20 right-0 bottom-88   xsm:bottom-88 md:static ">
                                 <ArrowRight
                                 onClick={(e) => e.stopPropagation() || slider.next()}
                                 />

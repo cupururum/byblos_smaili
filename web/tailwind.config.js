@@ -133,6 +133,9 @@ module.exports = {
         '236': '59rem',
         '240': '60rem',
         '264': '66rem'
+      },
+      transitionProperty: {
+        "height": "height"
       }
     },
   },

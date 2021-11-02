@@ -5,6 +5,8 @@ import Header from './header'
 import Footer from './footer'
 import Sandwich from './sandwich'
 import NavigationMain from './navigation-main';
+import AcceptCookies from '../accept-cookies/accept-cookies';
+
 
 function Layout(props) {
 
@@ -61,6 +63,7 @@ function Layout(props) {
             <main>{props.children}</main>
           
             <Footer linksAndLogos={linksAndLogos}/>
+            <AcceptCookies/>
           
       </div>
     ) 

@@ -8411,7 +8411,7 @@ sanity-diff-patch@^1.0.9:
   dependencies:
     diff-match-patch "^1.0.5"
 
-sanity-plugin-iframe-pane@^1.0.8:
+sanity-plugin-iframe-pane@^1.0.9:
   version "1.0.9"
   resolved "https://registry.npmjs.org/sanity-plugin-iframe-pane/-/sanity-plugin-iframe-pane-1.0.9.tgz#f828d0b206733ba8f5def560d1fb57f1dacca683"
   integrity sha512-JpaKARcYVt9O5mmX3Swaw6BDC/cab4ba+kDlQ6OAq2GKvG1rTetUuL96qkOZsuf4OgSokGR/Znbvdh2AqUEohA==

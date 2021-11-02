@@ -8,13 +8,13 @@ function IndexPage(props) {
 
   if (!props.landingPageImgAssets) {
     return (
-      <div className="center">
+      <div>
         <p>Loading...</p>
       </div>
     );
   }
   return (
-    <div>
+    <div className="pb-32">
       <LandingPage linksAndLogos={ props.landingPageImgAssets.externalLink } landingPageImgs={ props.landingPageImgAssets.landingPageImg[0] } />
     </div>
   )

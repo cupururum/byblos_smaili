@@ -13,7 +13,7 @@ function Footer(props) {
     
 
  return(
-    <footer className="w-full px-16 pt-24 h-156  bg-romance xsm:px-24 md:flex md:justify-between  md:h-96 md:px-10 md:pt-16 lg:h-36 lg:py-8 lg:px-16 xl:h-28 xl:py-6 xl:px-20 2xl:px-36 ">
+    <footer className=" w-full px-16 pt-24 h-156  bg-romance xsm:px-24 md:flex md:justify-between  md:h-96 md:px-10 md:pt-16   lg:absolute lg:bottom-0  lg:h-36 lg:py-8 lg:px-16  xl:h-28 xl:py-6 xl:px-20 2xl:px-36 ">
       
             <div className="xl:flex xl:space-x-10">
                     <Link href="/"><a className="lg:mt-5"> <ByblosLogo/></a></Link>

@@ -8,7 +8,7 @@ import EnvelopeIcon from './envelope-icon'
 function ContactUs(props) {
       
     return (
-        <div className="mb-36">
+        <div className="pb-36">
             <div className="pt-64 pb-24  bg-romance px-10  xl:flex xl:justify-between xl:px-20 2xl:px-36 ">
                 <div className="text-addressTextInContactUsMobile  md:text-addressTextInContactUsDesktop xl:mt-20">
                     <Logistics textStyle={"space-y-10"}

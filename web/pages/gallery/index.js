@@ -40,8 +40,12 @@ function Gallery({data, preview}){
       }
 
       const [isVewModeActive, setActiveViewMode] = useState(false)
-      function onClickImage() {
+      const [initialSlide, setInitialSlide] = useState(0)
+      function onClickImage(e) {
           setActiveViewMode(true)
+        
+          const findInitialSlide = parseInt(e.target.attributes.index.value, 10)
+          setInitialSlide(findInitialSlide)
       }
       function crossOnClickViewMode() {
           setActiveViewMode(false)
@@ -61,15 +65,21 @@ function Gallery({data, preview}){
      const windowSize = useWindowSize()
 
      let displayGallery
+     let imagesForViewMode
 
      if(windowSize.width >= 1000){
          displayGallery = <GalleryDesktop images={page.galleryDesktop.images} clickOnImage={onClickImage}/>
+         imagesForViewMode = page.galleryDesktop.images
+
+
      }
      if( windowSize.width <1000 ) {
          displayGallery = <GalleryTablet images={page.galleryTablet.images} clickOnImage={onClickImage}/>
+         imagesForViewMode = page.galleryTablet.images
      }
      if(windowSize.width < 701) {
         displayGallery = <GalleryMobile images={page.galleryMobile.images} clickOnImage={onClickImage}/>
+        imagesForViewMode = page.galleryMobile.images
      }
     
     return(
@@ -80,7 +90,7 @@ function Gallery({data, preview}){
                 <div className="row-span-1 col-span-2"></div>
                 <div className="row-span-2 col-span-1"></div>
             </div>
-            {isVewModeActive && <ViewMode images={page.galleryMobile.images} crossOnClickViewMode={crossOnClickViewMode}/>} 
+            {isVewModeActive && <ViewMode images={imagesForViewMode} crossOnClickViewMode={crossOnClickViewMode} initialSlide={initialSlide}/>} 
             {displayGallery}
              
         </>

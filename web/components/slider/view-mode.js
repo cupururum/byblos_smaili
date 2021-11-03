@@ -7,9 +7,9 @@ import ArrowRight from "./arrow-right"
 import WhiteCrossIcon from "./icon-cross-white"
 
 function ViewMode(props){
-    const [currentSlide, setCurrentSlide] = useState(2)
+    const [currentSlide, setCurrentSlide] = useState(props.initialSlide)
     const [sliderRef, slider] = useKeenSlider({
-        initial: 0,
+        initial: currentSlide,
         loop: true,
         slideChanged(s) {
         setCurrentSlide(s.details().relativeSlide)

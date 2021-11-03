@@ -132,11 +132,13 @@ module.exports = {
         '232': '58rem',
         '236': '59rem',
         '240': '60rem',
-        '264': '66rem'
+        '264': '66rem',
+        '280': '70rem',
+        '288': '72rem'
       },
       transitionProperty: {
-        "height": "height"
-      }
+        'height': 'height'
+       }
     },
   },
   variants: {

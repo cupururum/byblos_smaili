@@ -26,17 +26,17 @@ function CookiesPolicy() {
     
 
     return (
-        <div className="pt-52 px-7 mb-16 h-full xsm:px-10 2xl:px-36 4xl:mb-32 ">
+        <div className="pt-44 px-10 mb-16 h-full xsm:px-10  md:mb-56 xl:pb-64 xl:mb-0  2xl:px-36">
             <div className="w-16">    
                 <button className="focus:outline-none" onClick={() => chooseLanguageOnClick(cookiesEnglish)}> EN &rarr; </button>
                 <button className="focus:outline-none" onClick={() => chooseLanguageOnClick(cookiesPolish)}> PL &rarr; </button>
             </div>
-            <div className="overflow-hidden ">
-                <button className="focus:outline-none" onClick={privacyOnClick}>
-                    <h1 className={`inline-block py-4 text-introTextDesk text-left transition text-black  duration-700 ease-in-out transform ${isPrivacyDropdownActive ? 'text-btn-color-hover' : ''} `}> {language.privacyPolicy.header}</h1>
-                    <div className={`inline-block w-4 h-4 ml-5  border-b-2 border-l-2 mb-2 border-black  transition duration-700 ease-in-out  transform ${isPrivacyDropdownActive ? 'border-btn-color-hover mb-0 translate-y-2 rotate-135' : '-rotate-45'}  `}></div>
+            
+                <button className="mt-10" onClick={privacyOnClick}>
+                    <h1 className={`inline-block  text-addressTextInContactUsMobile  text-left text-black md:py-4 md:text-introTextDesk  transition  duration-700 ease-in-out transform ${isPrivacyDropdownActive ? 'text-btn-color-hover' : ''} `}> {language.privacyPolicy.header}</h1>
+                    <div className={`inline-block w-4 h-4 ml-2  border-b-2 border-l-2 mb-2 border-black  transition duration-700 ease-in-out  transform ${isPrivacyDropdownActive ? 'border-btn-color-hover mb-0 translate-y-2 rotate-135' : '-rotate-45'}  `}></div>
                 </button>
-                <div className={`overflow-hidden transition-all duration-700 ease-in-out transform ${isPrivacyDropdownActive ? 'h-216' : 'h-0'}`}>
+                <div className={`overflow-hidden overflow-y-auto transition-all  duration-700 ease-in-out h-0 transform ${isPrivacyDropdownActive ? 'h-288 2xl:h-232' : ''}`}>
 
                         {isPrivacyDropdownActive ? 
                                 
@@ -94,17 +94,17 @@ function CookiesPolicy() {
                 </div>
                
                 
-            </div>
-            <div className="overflow-hidden ">
+            
+            <div className="">
                 <button className="focus:outline-none" onClick={cookiesOnClick}>
-                    <h1 className={`inline-block py-4 text-introTextDesk text-left transition text-black  duration-700 ease-in-out transform ${isCookiesDropdownActive ? 'text-btn-color-hover' : ''} `}> {language.cookiesPolicy.header}</h1>
+                    <h1 className={`inline-block py-4 text-addressTextInContactUsMobile text-left text-black  md:text-introTextDesk transition  duration-700 ease-in-out transform ${isCookiesDropdownActive ? 'text-btn-color-hover' : ''} `}> {language.cookiesPolicy.header}</h1>
                     <div className={`inline-block w-4 h-4 ml-5  border-b-2 border-l-2 mb-2 border-black  transition duration-700 ease-in-out  transform ${isCookiesDropdownActive ? 'border-btn-color-hover mb-0 translate-y-2 rotate-135' : '-rotate-45'}  `}></div>
                 </button>
-                <div className={`overflow-hidden transition-all duration-700 ease-in-out transform ${isCookiesDropdownActive ? 'h-216' : 'h-0'}`}>
+                <div className={`overflow-hidden overflow-y-auto  transition-all duration-700 ease-in-out h-0 transform ${isCookiesDropdownActive ? 'h-288 2xl:h-232 ' : ''}`}>
 
                             {isCookiesDropdownActive ? 
                                 
-                                <div className="animate__animated animate__slideInDown"> 
+                                <div className="animate__animated animate__slideInDown "> 
                                     <p className="text-justify mb-4"> {language.cookiesPolicy.description} </p>
                                         <ul>
                                             {language.cookiesPolicy.policyParagraphs.map((paragraph) => 
@@ -128,7 +128,7 @@ function CookiesPolicy() {
                                 </div>
                             : 
                                 
-                                    <div className=" animate__animated animate__slideOutUp "> 
+                                    <div className="animate__animated animate__slideOutUp "> 
                                         <ul>
                                             {language.cookiesPolicy.policyParagraphs.map((paragraph) => 
                                                 <div className="mb-8" key={paragraph.id}>

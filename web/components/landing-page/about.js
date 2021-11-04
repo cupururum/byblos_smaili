@@ -33,7 +33,7 @@ function About(props) {
                     </a>
                 </Link>
             </div>
-            <div className="hidden lg:grid lg:grid-cols-1 lg:gap-8 lg:w-124 lg:h-80 lg:mt-12 xl:grid-cols-2 xl:w-7/12 xl:gap-6 xl:mt-10">
+            <div className="hidden lg:grid lg:grid-cols-1 lg:overflow-hidden lg:gap-8 lg:w-124 lg:h-152 lg:mt-12 xl:h-100 xl:grid-cols-2 xl:w-7/12 xl:gap-6 xl:mt-20 dxl:h-auto 3xl:mt-10">
                 {props.aboutImgs.map(image => <div key={image._key}><img src={image.asset.url} alt={image.alt}/></div>)}
             </div>
            

@@ -5,9 +5,8 @@ import Logistics from '../logistics/logistics'
 import ExternalLinks from '../external-links/external-links'
 
 function LandingPage(props){
-   const aboutImg = props.landingPageImgs.aboutImg
-   const heroImg = props.landingPageImgs.heroImg
-
+   const aboutImg = props.aboutImg[0].galleryDesktop.images
+   const heroImg = props.heroImgs[0].galleryDesktop.images
 
    return (
        <>

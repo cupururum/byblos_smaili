@@ -12,10 +12,14 @@ export const getDefaultDocumentNode = () => {
       .component(Iframe)
       .options({
         url: (doc) => resolveProductionUrl(doc),
+        refresh: {
+          button: true, // default `undefined`
+          revision: true, // default `undefined`
+        },
       })
       .title('Preview'),
   ])
-}
+}              
 
 export default () =>
   S.list()
@@ -65,7 +69,8 @@ export default () =>
               .child(S.documentTypeList('menuItem').title('Menu Items'))   
  
           ])
-        )
+        ),
+
         
     
     ])

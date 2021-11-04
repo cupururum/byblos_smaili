@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import Link from 'next/link'
 
 import Logistics from '../logistics/logistics';
+import BookTheTable from '../booking/booking';
 
 
 
@@ -9,8 +11,24 @@ function Hero(props) {
     const hummus = props.images[0]
     const centralPlate = props.images[1]
     const babaganush = props.images[2]
+
+    const [isBookingFormVisible, setBookingFormVisible] = useState(false)
+
+    function bookTheTableOnClick() {
+        setBookingFormVisible(true) 
+    }
+
+    function bookTheTableCrossOnClick() {
+        setBookingFormVisible(false) 
+    }
+
+
+
+
     return (
         <div className="bg-romance pt-28">
+
+            {isBookingFormVisible && <BookTheTable crossOnClick={bookTheTableCrossOnClick}/> }
             
             <Logistics textStyle={"text-headerTextAdress font-bold mt-12 ml-10 lg:ml-20 lg:mt-16 lg:space-y- xl:ml-24 2xl:ml-36"}
                           logoStyle={"mr-2 mt-"}/>
@@ -21,7 +39,7 @@ function Hero(props) {
                     <p className="md:px-24 lg:px-0">Prawdziwa kuchnia libańska ma niepowtarzalny smak.</p>
                     <p className="hidden md:block md:px-12 lg:px-0">Kombinacje przypraw oraz duża ilość warzyw sprawiają, że dania kuchni libańskiej są niezwykle różnorodne zarówno pod względem smaku, jak i kolorystyki.</p>
                 </div>
-                <button className="w-56 h-16 mb-5 border-2 border-black text-buttonJumbotron font-bold focus:outline-none lg:hover:bg-btn-color-hover lg:hover:border-0 md:mr-5 4xl:mr-10">
+                <button className="w-56 h-16 mb-5 border-2 border-black text-buttonJumbotron font-bold focus:outline-none lg:hover:bg-btn-color-hover lg:hover:border-0 md:mr-5 4xl:mr-10" onClick={bookTheTableOnClick}>
                         Rezerwacja
                 </button>
                 <Link href='#orderOnline'><button className="w-56 h-16 text-buttonJumbotron font-bold bg-white focus:outline-none lg:hover:bg-btn-color-hover ">

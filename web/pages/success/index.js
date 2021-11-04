@@ -1,6 +1,8 @@
+import SuccessSubmit from "../../components/success-page/success-page"
+
 function Success(){
     return (
-        <div> Success! </div>
+        <SuccessSubmit/>
     )
 }
 

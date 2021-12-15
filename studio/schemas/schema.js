@@ -14,6 +14,8 @@ import imageAboutSection from './imageAboutSection'
 import landingPageImg from './landingPageImg'
 import gallery from './objects/gallery'
 import galleryPage from './galleryPage'
+import blockContent from './objects/blockContent'
+import article from './article'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -32,7 +34,9 @@ export default createSchema({
     imageAboutSection,
     landingPageImg,
     galleryPage,
-    gallery
+    gallery,
+    article,
+    blockContent
 
   ]),
 })

@@ -1,16 +1,25 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 
 import successImage from "/public/successImage.png"
 import MarkerIcon from '../logistics/icons/icon-marker';
 import WhiteCrossIcon from "../slider/icon-cross-white"
 
 function SuccessSubmit() {
+    const [ visible, setVisible ] = useState(true)
+
+    function crossOnClick(){
+        setVisible(!visible)
+    }
+
     return (
+        <>
+        {visible && 
             <div className="fixed z-20 inset-0 flex flex-col pt-40 bg-romance md:pt-52 xl:pt-60  ">
-                <button className="absolute top-10 right-10 focus:outline-none lg:static" >
-                    <Link href="/"><WhiteCrossIcon/></Link>
-                </button>   
+                 <Link href="/"><button className="absolute top-10 right-10 z-20 focus:outline-none lg:static lg:flex lg:justify-end lg:mr-20" onClick={crossOnClick}>
+                   <WhiteCrossIcon/>
+                </button></Link>
                 <h1 className="w-full text-center text-introTextDesk"> See you! </h1>
                 <h2 className="w-full text-center text-socialCardText"> Your form submission has been received </h2>
                 <p className="w-full text-center text-dusty-creme text-lg">
@@ -32,6 +41,8 @@ function SuccessSubmit() {
                     <Link  href="https://www.google.com/maps?ll=52.244763,21.011318&z=19&t=m&hl=en-US&gl=US&mapclient=apiv3&cid=10245437596016278220">  Open in maps &gt;</Link>
                 </p>
             </div>
+        }
+        </>
     )
 }
 

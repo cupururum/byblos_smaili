@@ -4,6 +4,7 @@ import {usePreviewSubscription} from '../../lib/sanity'
 import useWindowSize from '../../hooks/useWindowSize'
 
 import { useState } from 'react'
+import { useRouter } from "next/router";
 
 import GalleryMobile from '../../components/gallery/gallery-mobile'
 import GalleryDesktop from '../../components/gallery/gallery-desktop'
@@ -51,13 +52,15 @@ function Gallery({data, preview}){
           setActiveViewMode(false)
       }
 
+      const router = useRouter();
+
       const {data: previewData} = usePreviewSubscription(data?.query, {
         params: data?.gallerySlug ?? {},
         // The hook will return this on first render
         // This is why it's important to fetch *draft* content server-side!
         initialData: data?.images,
         // The passed-down preview context determines whether this function does anything
-        enabled: preview,
+        enabled: preview || router.query.preview !== undefined
       })
       const page = filterDataToSingleItem(previewData, preview)
     

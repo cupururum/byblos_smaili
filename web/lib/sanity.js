@@ -21,7 +21,15 @@ import {
     ...config,
     // Serializers passed to @sanity/block-content-to-react
     // (https://github.com/sanity-io/block-content-to-react)
-    serializers: {},
+    serializers: {
+      types: {
+        code: (props) => (
+          <pre data-language={props.node.language}>
+            <code>{props.node.code}</code>
+          </pre>
+        ),
+      },
+    },
   })
   
   // Helper function for using the current logged in user account

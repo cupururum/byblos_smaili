@@ -71,6 +71,11 @@ export default () =>
           ])
         ),
 
+        S.listItem()
+        .title('News')
+        .schemaType('article')
+        .child(S.documentTypeList('article').title("Article")),
+
         
     
     ])

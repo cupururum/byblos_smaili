@@ -57,7 +57,7 @@ function MenuSection({data, preview}){
             </div>
         )
     }
-
+    
     return(
         <div className="px-7 pt-44 mb-36 xsm:px-10 lg:flex lg:justify-between lg:px-0">
             <div className="lg:w-1/12"></div>
@@ -89,7 +89,8 @@ export async function getStaticProps({params, preview = false }){
                 vegeterian,
                 ingredients
             },
-            "menuSections": *[_type == 'menuSection']{
+            "menuSections": *[_type == 'menuSection']  | order(priority asc) 
+            {
                 _id,
                 title,
                 slug {

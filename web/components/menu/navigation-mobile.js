@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import 'animate.css'
 
 import NavigationMobileItem from "./navigation-mobile-item"
 import NavigationMobileActiveItem from "./navigation-mobile-active-item"
@@ -17,7 +18,8 @@ function NavigationMobile(props){
             <div  className="relative mt-4 z-10 bg-white pb-4">
                 <NavigationMobileActiveItem activeSection={props.activeSection} onClick={handleNavOnClick}/>
                 { navOpen && 
-                        <div className="abosute origin-top-right absolute right-0 w-full z-10 bg-white">
+                        <div className="abosute origin-top-right absolute right-0 w-full z-10 bg-white overflow-hidden">
+                            <div className="animate__animated animate__slideInDown">
                            { props.menuSections.filter(section => section.title.toLowerCase() !== props.activeSection ).map((section) => 
                                     <NavigationMobileItem key={section._id}
                                                           title={section.title}
@@ -26,6 +28,7 @@ function NavigationMobile(props){
                                                           onClick={handleNavOnClick}/>
                                         )
                             } 
+                            </div>
                         </div>
                 }
             </div>       

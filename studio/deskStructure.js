@@ -66,9 +66,30 @@ export default () =>
             S.listItem()
               .title('Menu Item')
               .schemaType('menuItem')
-              .child(S.documentTypeList('menuItem').title('Menu Items'))   
+              .child(S.documentTypeList('menuItem').title('Menu Items')),
+
+              S.listItem()
+              .title('Menu Items by Menu Section')
+              .child(
+                // List out all categories
+                S.documentTypeList('menuSection')
+                  .title('Menu Items by Menu Section')
+                  .child(menuItemId =>
+                    // List out project documents where the _id for the selected
+                    // category appear as a _ref in the project’s categories array
+                    S.documentList()
+                      .schemaType('menuItem')
+                      .title('Menu Item')
+                      .filter(
+                        '_type == "menuItem" && $menuItemId in menuSection[]._ref'
+                      )
+                      .params({ menuItemId })
+                  )
+              ),
  
           ])
+
+         
         ),
 
         S.listItem()

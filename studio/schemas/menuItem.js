@@ -39,8 +39,14 @@ export default {
     {
       title: 'Menu Section',
       name: 'menuSection',
-      type: 'reference',
-      to: {type:'menuSection'} 
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: {type:'menuSection'} 
+        }
+      ]
+      
     }
   ],
 

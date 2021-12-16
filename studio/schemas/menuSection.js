@@ -20,6 +20,12 @@ export default {
         }
       },
       {
+        title: 'Order in priority',
+        name: "priority",
+        type: 'number'
+
+      },
+      {
         title: 'Menu Items',
         name: 'menuItems',
         type: 'array',

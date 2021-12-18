@@ -15,7 +15,7 @@ function MenuItem(props){
                         {props.vegeterian ? <VegIcon/> : <div className="w-5 h-5 mb-2"> </div> }    
                         <p className="w-36 text-socialCardText md:text-dxlAboutText xl:text-socialCardText xl:w-44"> {props.title} </p>
                         <div className="absolute  bottom-0 left-0  box-content w-12 h-8 px-1 pt-1 ml-1 border-l-2 border-r-2 border-black bg-black text-white text-socialCardText font-bold text-center ">{props.price}</div>
-                        {props.new && <div className="absolute  bottom-0 right-0  box-content w-12 h-8 px-1 pt-1 ml-1 border-l-2 border-r-2 border-soft-amber bg-soft-amber text-white text-socialCardText font-bold text-center "> new </div>}                 
+                        {props.new && <div className="absolute  bottom-0 right-0  box-content w-12 h-8 px-1 pb-1 ml-1 border-l-2 border-r-2 border-soft-amber bg-soft-amber text-white text-socialCardText font-bold text-center "> new </div>}                 
                 </div>     
         </div>
     )

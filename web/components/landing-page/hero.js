@@ -31,7 +31,7 @@ function Hero(props) {
             {isBookingFormVisible && <BookTheTable crossOnClick={bookTheTableCrossOnClick}/> }
             
             <Logistics textStyle={"text-headerTextAdress font-bold mt-12 ml-10 lg:ml-20 lg:mt-16 lg:space-y- xl:ml-24 2xl:ml-36"}
-                          logoStyle={"mr-2 mt-"}/>
+                          logoStyle={"mr-2"}/>
            
             
             <div className="mt-32 mb-28 px-12 text-mobileIntroTextDesk text-center lg:mx-24 lg:mt-12  lg:text-dxlIntroTextDesk dxl:mx-80 dxl:mt-20 4xl:h-68 4xl:px-0 4xl:mx-108  4xl:mt-24 4xl:mb-52 4xl:text-introTextDesk  5xl:mx-172">

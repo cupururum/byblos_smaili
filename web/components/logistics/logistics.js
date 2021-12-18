@@ -7,7 +7,7 @@ function Logistics(props){
 
 
     return (   
-                <div className={`${textStyle}`}>
+                <div className={` ${textStyle}`}>
                     <div className="flex"> 
                         <MarkerIcon logoStyle={logoStyle}/>
                         

@@ -12,7 +12,7 @@ function LandingPage(props){
    return (
        <>
            <Hero images={heroImg}/>
-           <div className="mt-44 px-7 xsm:px-10 md:mt-36 lg:px-20 lg:mt-32 lg:mb-20 xl:px-24 xl:mt-40 4xl:px-36 4xl:mt-60 ">
+           <div className="mt-44 px-7 xsm:px-10 md:mt-36 lg:px-20 lg:mt-32 lg:mb-20 xl:px-24  xl:mt-36 4xl:px-36 4xl:mt-60 ">
                 <Logistics textStyle="text-bodytextAdress md:hidden"
                               extraText="Warsawa,"
                               logoStyle="hidden" 

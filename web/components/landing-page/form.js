@@ -4,10 +4,9 @@ function Form(){
                                 <h1 className="text-addressTextInContactUsMobile mb-10 lg:mb-0 xl:text-IntroTextDesk  4xl:mb-12"> Rezerwacja </h1>
                                 <form  className="w-full max-w-sm text-formText" 
                                     name="booking" 
-                                    method="post"
+                                    method="POST"
                                     action="/success"
                                     netlify-honeypot="bot-field"
-                                    data-netlify-recaptcha="true"
                                     data-netlify="true">
                                 
                                     <input type="hidden" name="form-name" value="booking"  />
@@ -33,7 +32,7 @@ function Form(){
                                     <button className="w-56 h-16 mt-10 bg-white-coffee text-buttonJumbotron font-bold focus:outline-none lg:hover:bg-btn-color-hover" type="submit">
                                             Rezerwacja
                                     </button>
-                                    <div data-netlify-recaptcha="true"></div>
+                                   
                                 </form>
                             </div>
     )

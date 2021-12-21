@@ -45,10 +45,9 @@ function ContactUs(props) {
                     <h1 className="text-addressTextInContactUsMobile mb-10 xl:text-introTextDesk"> Questions? </h1>
                     <form className="w-full text-formText md:flex md:space-x-10" 
                         name="contact" 
-                        method="post"
+                        method="POST"
                         action="/success"
                         netlify-honeypot="bot-field"
-                        data-netlify-recaptcha="true"
                         data-netlify="true">
 
                         <input type="hidden" name="form-name" value="contact"  />

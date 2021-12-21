@@ -29,9 +29,16 @@ function Hero(props) {
         <div className="bg-romance pt-28">
 
             {isBookingFormVisible && <BookTheTable crossOnClick={bookTheTableCrossOnClick}/> }
-            
-            <Logistics textStyle={"text-headerTextAdress font-bold mt-12 ml-10 lg:ml-20 lg:mt-16 lg:space-y- xl:ml-24 2xl:ml-36"}
-                          logoStyle={"mr-2"}/>
+
+            <div className='flex justify-start'>
+                <div className="w-0 lg:w-1/12"></div>
+                <div className="w-10/12">
+                    <Logistics textStyle={"text-headerTextAdress font-bold mt-12 ml-10 lg:mt-16 lg:ml-0"}
+                          logoStyle={"mr-1"}/>
+                </div>
+                <div className="w:0 lg:w-1/12"></div>
+            </div>
+           
            
             
             <div className="mt-32 mb-28 px-12 text-mobileIntroTextDesk text-center lg:mx-24 lg:mt-12  lg:text-dxlIntroTextDesk dxl:mx-80 dxl:mt-20 4xl:h-68 4xl:px-0 4xl:mx-108  4xl:mt-24 4xl:mb-52 4xl:text-introTextDesk  5xl:mx-172">

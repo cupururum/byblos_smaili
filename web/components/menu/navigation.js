@@ -1,7 +1,6 @@
 import NavigationItem from "./navigation-item"
 
 function Navigation(props) {
-    console.log(props.activeSection)
     return (
         <>
             {props.menuSections.map((section) => 

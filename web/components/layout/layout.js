@@ -59,7 +59,7 @@ function Layout(props) {
        
           {isNavigationShouldBeVisible && <NavigationMain linksAndLogos={linksAndLogos} navItems={navItems} onClick={hideNavMain}/>}
           { !isNavigationShouldBeVisible && <Sandwich onClick={showNavMain}/> }
-          <Header navItems={navItems}/>
+            <Header navItems={navItems}/>
             <main>{props.children}</main>
           
             <Footer linksAndLogos={linksAndLogos}/>

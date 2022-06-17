@@ -19,7 +19,7 @@ function NavigationMobile(props){
                 <NavigationMobileActiveItem activeSection={props.activeSection} onClick={handleNavOnClick}/>
                 { navOpen && 
                         <div className="absolute right-0 w-full z-10  overflow-hidden  ">
-                            <div className="bg-white animate__animated animate__slideInDown">
+                            <div className="bg-white animate__animated animate__slideInDown animate__faster">
                            { props.menuSections.filter(section => section.title.toLowerCase() !== props.activeSection ).map((section) => 
                                     <NavigationMobileItem key={section._id}
                                                           title={section.title}

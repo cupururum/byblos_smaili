@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+
 
 import ByblosLogo from './svg/byblos-logo'
 
@@ -13,7 +13,7 @@ function Header(props){
             <Link href="/"><a > <ByblosLogo/></a></Link>
             <nav className="hidden lg:flex lg:space-x-8 dxl:space-x-12 lg:mt-2 lg:mr-10 ">
                 {props.navItems.map((item) => 
-                    <button className="px-3 pt-1 hover:border-b hover:border-black active:border-b active:border-black" key={item._id}> 
+                    <button className="px-4 pt-1 pb-1 hover:border-b hover:border-black active:border-b active:border-black" key={item._id}> 
                         <Link href={`/${item.slug.current}`}>{item.title}</Link>
                     </button>
                 )}

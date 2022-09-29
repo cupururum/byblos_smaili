@@ -29,7 +29,7 @@ function NavbarItems() {
        <Fragment>
 
             {navItems.map((item) => 
-                <div className="xl:hover:underline" key={item._id}> 
+                <div className="active:undeline xl:hover:underline" key={item._id}> 
                     <Link href={`/${item.slug.current}`}>{item.title}</Link>
                 </div>
             )}

@@ -22,11 +22,11 @@ function Form(){
                                     </div>
                                     <div className="flex items-center border-b border-black py-2 mb-10 lg:mb-5 xl:mb-10">
                                         <span className="text-red-500">*</span> 
-                                        <input className="appearance-none bg-transparent border-none placeholder-black w-full text-black mr-3 py-1 px-2 leading-tight focus:outline-none" type="number" name="guests" aria-label="number" placeholder="Liczba gości" required/>
+                                        <input className="appearance-none bg-transparent border-none placeholder-black w-full text-black mr-3 py-1 px-2 leading-tight focus:outline-none" type="number" name="guests" aria-label="number" placeholder="Liczba gości" min="1" max="8" required/>
                                     </div>
                                     <div className="flex items-center border-b border-black py-2 lg:mb-5 xl:mb-10">
                                         <span className="text-red-500">*</span>
-                                        <input className="appearance-none bg-transparent border-none placeholder-black w-full text-black mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="phone" aria-label="phone" placeholder="Numer telefonu"  required/>
+                                        <input className="appearance-none bg-transparent border-none placeholder-black w-full text-black mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="phone" aria-label="phone" placeholder="Numer telefonu +48123456789" required  pattern="/^+48\d{9}$/" />
                                     </div>
                                 
                                     <button className="w-56 h-16 mt-10 bg-white-coffee text-buttonJumbotron font-bold focus:outline-none lg:hover:bg-btn-color-hover" type="submit">

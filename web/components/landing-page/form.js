@@ -1,4 +1,18 @@
 function Form(){
+
+    const currentDate = new Date()
+ 
+    let month = currentDate.getMonth()
+    let monthString
+    if (month < 9) {
+        month += 1
+        monthString = "0" + month  
+    } else {
+        month += 1
+        monthString = month.toString()
+    }
+    const minDate = `${currentDate.getFullYear()}-${monthString}-${currentDate.getDate()}`
+    const maxDate = `${currentDate.getFullYear()}-${monthString}-${currentDate.getDate()+14}`
     return(
         <div className="mt-20 md:w-84 md:pr-5 md:mt-6" >
                                 <h1 className="text-addressTextInContactUsMobile mb-10 lg:mb-0 xl:text-IntroTextDesk  4xl:mb-12"> Rezerwacja </h1>
@@ -18,15 +32,15 @@ function Form(){
                                     </div>
                                     <div className="flex items-center border-b border-black py-2 mb-10 lg:mb-5 xl:mb-10">
                                         <span className="text-red-500">*</span>
-                                        <input className="appearance-none bg-transparent border-none placeholder-black w-full text-black mr-3 py-1 px-2 leading-tight focus:outline-none" type="date" name="date" aria-label="date" placeholder="Dzień i godzina" required="required"/>
+                                        <input className="appearance-none bg-transparent border-none placeholder-black w-full text-black mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="date" aria-label="date" min={minDate} max={maxDate} placeholder="Dzień i godzina" onFocus={(e)=> (e.target.type = "date")} required="required"/>
                                     </div>
                                     <div className="flex items-center border-b border-black py-2 mb-10 lg:mb-5 xl:mb-10">
                                         <span className="text-red-500">*</span> 
-                                        <input className="appearance-none bg-transparent border-none placeholder-black w-full text-black mr-3 py-1 px-2 leading-tight focus:outline-none" type="number" name="guests" aria-label="number" placeholder="Liczba gości" min="1" max="8" required/>
+                                        <input className="appearance-none bg-transparent border-none placeholder-black w-full text-black mr-3 py-1 px-2 leading-tight focus:outline-none" type="number" name="guests" aria-label="number" placeholder="Liczba gości min 1 max 8" min="1" max="8" required/>
                                     </div>
                                     <div className="flex items-center border-b border-black py-2 lg:mb-5 xl:mb-10">
                                         <span className="text-red-500">*</span>
-                                        <input className="appearance-none bg-transparent border-none placeholder-black w-full text-black mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="phone" aria-label="phone" placeholder="Numer telefonu +48123456789" required  pattern="/^+48\d{9}$/" />
+                                        <input className="appearance-none bg-transparent border-none placeholder-black w-full text-black mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" name="phone" aria-label="phone" placeholder="Numer telefonu" pattern="/^+48\d{9}$/"  required  />
                                     </div>
                                 
                                     <button className="w-56 h-16 mt-10 bg-white-coffee text-buttonJumbotron font-bold focus:outline-none lg:hover:bg-btn-color-hover" type="submit">

@@ -36,13 +36,9 @@ export async function getStaticProps() {
           imgCards{
             asset->{
                 url
+              }
             }
-            }
-      },
-        'landingPageImg': *[_type == 'landingPageImg']{
-          heroImg[]{_key, alt, asset->{url}},
-          aboutImg[]{_key, alt, asset->{url}}
-      },
+      },  
         'mainPageHeroImg': *[_type == 'galleryPage' && galleryName == 'landing page hero']{
                           _id, 
                           galleryDesktop{
@@ -64,7 +60,6 @@ export async function getStaticProps() {
 
   return {
     props: { landingPageImgAssets }
-
   }
 }
 

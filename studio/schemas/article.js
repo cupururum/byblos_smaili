@@ -26,9 +26,25 @@ export default {
         type: "text"
       },
       {
-        name: 'mainImage',
-        title: 'Main image',
-        type: 'image',
+        name: 'mainImageDesktop',
+        title: 'Main Image Desktop',
+        type: 'gallery',
+        options: {
+          hotspot: true
+        }
+      },
+      {
+        name: 'mainImageTablet',
+        title: 'Main Image Tablet',
+        type: 'gallery',
+        options: {
+          hotspot: true
+        }
+      },
+      {
+        name: 'mainImageMobile',
+        title: 'Main Image Mobile',
+        type: 'gallery',
         options: {
           hotspot: true
         }
@@ -47,8 +63,7 @@ export default {
   
     preview: {
       select: {
-        title: 'title',
-        media: 'mainImage'
+        title: 'title'
       }
     }
   }

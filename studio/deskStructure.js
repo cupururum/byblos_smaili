@@ -30,12 +30,12 @@ export default () =>
         .schemaType('navigation')
         .child(S.documentTypeList('navigation').title("Navigation")),
 
-        S.listItem()
+      S.listItem()
         .title('Gallery for Pages')
         .schemaType('galleryPage')
         .child(S.documentTypeList('galleryPage').title("Gallery Page")),
 
-    S.listItem()
+      S.listItem()
         .title('Images In About Section')
         .schemaType('imageAboutSection')
         .child(S.documentTypeList('imageAboutSection').title("Image In About Us")),

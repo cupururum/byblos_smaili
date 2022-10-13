@@ -9,11 +9,9 @@ function News(props){
         return (<div> Loading... </div>)
     }
 
-    console.log(props.allNews)
-
     const { allNews } = props
     return (
-        <div className="pt-32 pb-32 px-32">
+        <div className="">
            <AllNews allNews={allNews}/>
         </div>
     )
@@ -23,7 +21,20 @@ export default News
 
 
 export async function getStaticProps() {
-    const allNews  = await getClient().fetch(groq`*[_type == 'article']{_id, title,  excerpt, mainImage{asset->{url}}, slug{current}}`)
+    const allNews  = await getClient().fetch(groq`*[_type == 'article']{
+                                                            _id, 
+                                                            title,
+                                                            excerpt, 
+                                                            mainImageDesktop{
+                                                                images[]{_key, asset->{url}}
+                                                            },
+                                                            mainImageTablet{
+                                                                images[]{_key, asset->{url}}
+                                                            },
+                                                            mainImageMobile{
+                                                                images[]{_key, asset->{url}}
+                                                            },    
+                                                            slug{current}}`)
 
     return{
         props: {allNews}

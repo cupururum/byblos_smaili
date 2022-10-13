@@ -11,7 +11,7 @@ function Header(props){
         <div className="w-0 lg:w-1/12"></div>
         <div className="lg:flex lg:justify-between lg:w-10/12">
             <Link href="/"><a > <ByblosLogo/></a></Link>
-            <nav className="hidden lg:flex lg:space-x-8 dxl:space-x-12 lg:mt-2 lg:mr-10 ">
+            <nav className="hidden xl:flex  dxl:space-x-12 lg:mt-2 lg:mr-10 ">
                 {props.navItems.map((item) => 
                     <button className="px-4 pt-1 pb-1 hover:border-b hover:border-black active:border-b active:border-black" key={item._id}> 
                         <Link href={`/${item.slug.current}`}>{item.title}</Link>

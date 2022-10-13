@@ -2,17 +2,20 @@ function Form(){
 
     const currentDate = new Date()
  
-    let month = currentDate.getMonth()
-    let monthString
-    if (month < 9) {
-        month += 1
-        monthString = "0" + month  
-    } else {
-        month += 1
-        monthString = month.toString()
+    let month = currentDate.getMonth() + 1
+    let day = currentDate.getDate()
+    let maxDay = day + 14
+
+    if (day < 10) {
+        day = "0" + day
     }
-    const minDate = `${currentDate.getFullYear()}-${monthString}-${currentDate.getDate()}`
-    const maxDate = `${currentDate.getFullYear()}-${monthString}-${currentDate.getDate()+14}`
+
+    if (month < 10) {
+        month = "0" + month  
+    } 
+
+    const minDate = `${currentDate.getFullYear()}-${month}-${day}`
+    const maxDate = `${currentDate.getFullYear()}-${month}-${maxDay}`
     return(
         <div className="mt-20 md:w-84 md:pr-5 md:mt-6" >
                                 <h1 className="text-addressTextInContactUsMobile mb-10 lg:mb-0 xl:text-IntroTextDesk  4xl:mb-12"> Rezerwacja </h1>

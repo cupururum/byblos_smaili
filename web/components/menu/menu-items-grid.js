@@ -3,7 +3,7 @@ import MenuItem from "../../components/menu/menu-item"
 function MenuItemsGrid(props) {
 
     return (
-        <div className="z-0 pt-5 space-y-10 md:space-y-0 md:grid lg:pt-0 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 4xl:grid-cols-3 gap-10">
+        <div className="z-0 pt-5 space-y-10 md:gap-y-10 md:space-y-0 md:grid lg:pt-0 md:grid-cols-2 4xl:grid-cols-3 ">
                         {props.menuItems.map((menuItem) => 
                                 <MenuItem   key={menuItem._id}
                                             pic={menuItem.dishImage.asset.url}

@@ -32,12 +32,12 @@ function Footer(props) {
         <footer className="w-full px-16 pt-24 h-156  bg-romance xsm:px-24 md:flex md:justify-between  md:h-96 md:px-10 md:pt-16   lg:absolute lg:bottom-0  lg:h-36 lg:py-8 lg:px-16  xl:h-28 xl:py-6 xl:px-20 2xl:px-36 ">
         
                 <div className="xl:flex xl:space-x-5 ">
-                        <Link href="/"><a className="lg:mt-5"> <ByblosLogo/></a></Link>
+                        <Link href="/"><a className="lg:mt-5"> <ByblosLogo style={"w-40 h-7"}/></a></Link>
+                </div>
 
-                        <div className="hidden text-dusty-creme md:block md:mt-52 md:pt-2 lg:mt-3 xl:w-56 xl:mt-4 ">
-                            <p className="inline-block mr-4 xsm:ml-2 lg:ml-0">© 2021 Byblos</p>
+                <div className="hidden text-dusty-creme text-nav md:block md:mt-52 md:pt-2 lg:mt-3 xl:mt-4 ">
+                            <p className="inline-block mr-4 xsm:ml-2 lg:ml-0 3xl:mr-8">© 2021 Byblos</p>
                             <p className="inline-block">Privacy Policy</p>
-                        </div>
                 </div>
 
                 <div className="lg:flex lg:space-x-10">   
@@ -61,7 +61,7 @@ function Footer(props) {
                         }
                     </div>
                 </div>
-                <div className="mt-16  text-dusty-creme md:hidden">
+                <div className="mt-16  text-dusty-creme text-nav md:hidden">
                         <p className="inline-block mr-2 xsm:mr-3 ">© 2022 Byblos</p>
                         <p className="inline-block"><Link href="/cookies">Privacy Policy</Link></p>
                 </div>

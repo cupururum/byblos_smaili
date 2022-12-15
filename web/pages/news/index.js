@@ -11,9 +11,9 @@ function News(props){
 
     const { allNews } = props
     return (
-        <div className="">
+        <>
            <AllNews allNews={allNews}/>
-        </div>
+        </>
     )
 }
 

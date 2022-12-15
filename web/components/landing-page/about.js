@@ -6,10 +6,10 @@ function About(props) {
 
 
     return (
-        <div className="mt-24 lg:flex lg:justify-between lg:mt-16 lg:mb-32 lg:px-0 xl:mb-40 ">
-            <div className="lg:w-108 lg:mr-10 iPadPro11:w-88 xl:w-5/12 xl:mr-10 4xl:mr-20 ">
-                <h1 className="text-addressTextInContactUsMobile md:text-introTextDesk"> O nas </h1>
-                <p className="text-aboutText mt-5 lg:mt-3 xl:mt-5 2xl:mt-6 3xl:mt-8 4xl:mt-16">
+        <div className="mt-24 lg:flex lg:justify-between lg:mt-16 lg:mb-32 xl:mb-40 ">
+            <div className="xl:w-1/3 3xl:w-1/3 ">
+                <h1 className="text-addressTextInContactUsMobile md:text-introTextDesk 3xl:mb-16"> O nas </h1>
+                <p className="text-aboutText mt-5 lg:mt-1 xl:text-twoXlAboutText 3xl:text-aboutText 3xl:mb-20 3xl:pr-5">
                     Restauracja Byblos powstała z miłości do prawdziwej kuchni libańskiej. 
                     Od początku naszym głównym celem jest stworzenie miejsca, 
                     gdzie każdy gość będzie miał możliwość spróbować niesamowicie pyszne 
@@ -27,14 +27,16 @@ function About(props) {
                 </p>
                 <Link href="/galeria">
                     <a>
-                        <button className="w-56 h-16 mt-10 lg:mt-5 text-buttonJumbotron border-2 border-black focus:outline-none lg:hover:bg-btn-color-hover lg:hover:border-0">
+                        <button className="w-56 h-16 mt-10 lg:mt-5 text-buttonJumbotron border-2 border-black focus:outline-none lg:hover:bg-btn-color-hover lg:hover:border-0 3xl:mt-6">
                             Galeria  &gt; 
                         </button>
                     </a>
                 </Link>
             </div>
-            <div className="hidden lg:grid lg:grid-cols-1 lg:overflow-hidden lg:gap-8 lg:w-124 lg:h-152 lg:mt-12 xl:h-100 xl:grid-cols-2 xl:w-7/12 xl:gap-6 xl:mt-20 dxl:h-auto 3xl:mt-10">
-                {props.aboutImgs.map(image => <div key={image._key}><img src={image.asset.url} alt={image.alt}/></div>)}
+            <div className="xl:w-2/3 3xl:w-2/3">
+                <div className="hidden justify-items-stretch lg:mt-12 xl:grid  xl:grid-cols-2 xl:gap-5 xl:mt-20 3xl:gap-10 3xl:mt-5">
+                    {props.aboutImgs.map(image => <img key={image._key} src={image.asset.url} alt={image.alt}/>)}
+                </div>
             </div>
            
         </div>

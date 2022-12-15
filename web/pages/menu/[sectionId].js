@@ -62,7 +62,7 @@ function MenuSection({data, preview}){
         menuContent = <MenuItemsGrid menuItems={data.menu.menuItems}/>
     }
 
-    if (windowSize.width < 780 ) {
+    if (windowSize.width < 1024 ) {
         return (
             <div className="px-7 pt-44 mb-36 min-h-full">
                 <NavigationMobile menuSections={page.menuSections} activeSection={data.menuSectionId}/>
@@ -78,10 +78,10 @@ function MenuSection({data, preview}){
     return(
         <div className="px-7 pt-44 mb-36 xsm:px-10 lg:flex lg:justify-between lg:px-0 lg:mb-0 lg:pb-44">
             <div className="lg:w-1/12"></div>
-            <div className="lg:w-5/12 xl:w-3/12">
+            <div className="lg:w-3/12 xl:w-3/12">
                 <Navigation menuSections={page.menuSections} activeSection={data.menuSectionId}/>
             </div>
-            <div className="lg:w-5/12 xl:w-6/12 2xl:w-7/12">{menuContent}</div>
+            <div className="lg:w-6/12 xl:w-6/12 2xl:w-7/12">{menuContent}</div>
             <div className="lg:w-1/12"></div>
         </div>
     )

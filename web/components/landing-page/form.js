@@ -17,7 +17,7 @@ function Form(){
     const minDate = `${currentDate.getFullYear()}-${month}-${day}`
     const maxDate = `${currentDate.getFullYear()}-${month}-${maxDay}`
     return(
-        <div className="mt-20 md:w-84 md:pr-5 md:mt-6" >
+        <div className="mt-20 md:w-84 md:pr-5 md:mt-6 xl:w-92" >
                                 <h1 className="text-addressTextInContactUsMobile mb-10 lg:mb-0 xl:text-IntroTextDesk  4xl:mb-12"> Rezerwacja </h1>
                                 <form  className="w-full max-w-sm text-formText" 
                                     name="booking" 

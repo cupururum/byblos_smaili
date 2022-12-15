@@ -18,10 +18,10 @@ function ViewMode(props){
     return (
         <div className="fixed z-20 w-full h-full bg-black bg-opacity-80">
             <div className="absolute z-20 right-10 top-10 " onClick={props.crossOnClickViewMode}> <WhiteCrossIcon/> </div>
-            <div className="md:grid md:grid-cols-6 lg:grid-cols-5 md:place-items-center  mt-28 xsm:mt-5  md:mt-40">
+            <div className="md:grid md:grid-cols-6 lg:grid-cols-5 md:place-items-center  mt-28 xsm:mt-2  md:mt-32">
                     {slider && (
                      
-                            <div className="absolute z-20 left-0 bottom-88  xsm:bottom-88 md:static">
+                            <div className="absolute z-20 left-0 bottom-88  xsm:bottom-80 md:static">
                                 <ArrowLeft
                                 onClick={(e) => e.stopPropagation() || slider.prev()}
                                 />
@@ -36,7 +36,7 @@ function ViewMode(props){
 
                     {slider && (
                
-                            <div className="absolute z-20 right-0 bottom-88   xsm:bottom-88 md:static ">
+                            <div className="absolute z-20 right-0 bottom-88   xsm:bottom-80 md:static ">
                                 <ArrowRight
                                 onClick={(e) => e.stopPropagation() || slider.next()}
                                 />

@@ -17,10 +17,11 @@ function LandingPage(props){
                               extraText="Warsawa,"
                               logoStyle="hidden" 
                               addressStyle="flex space-x-2" />
-                <div className="mt-10 md:flex md:flex-row-reverse lg:justify-between">
+                <div className="mt-10 md:flex md:flex-row-reverse lg:gap-5 3xl:gap-0">
+                    <div className="md:w-1/2 lg:w-2/3 lg:pl-5 3xl:pl-0">
                         <Map
                             id="findByblos"
-                            mapStyle="h-80 md:w-92 md:h-124 md:mx-0 lg:w-132 lg:h-144 xl:w-8/12 4xl:w-264 4xl:h-160"
+                            mapStyle="h-80 md:w-92 md:h-full md:mx-0 lg:w-full lg:h-full"
                             options={{
                                     center: { lat: 52.244763, lng: 21.011318 },
                                     zoom: 19
@@ -33,7 +34,8 @@ function LandingPage(props){
                                 });
                             }}
                         />
-                        <div >
+                    </div>
+                    <div className="md:w-1/2 lg:w-1/3">
 
                             <Logistics textStyle="hidden  text-bodytextAdress md:block"
                                 extraText="Warszawa,  &nbsp; "
@@ -42,7 +44,7 @@ function LandingPage(props){
 
                             <Form/>
                            
-                        </div>
+                    </div>
                 </div>
                 <p className="text-dark-grey mt-5 text-cookiesPolicyLink md:w-80 xl:mt-10 4xl:w-100 4xl:mt-5 ">
                     Przez kliknecie przycisku “Rezerwacja” zgadzają się Państwo na przetwarzanie Państwa danych.

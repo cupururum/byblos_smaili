@@ -104,6 +104,7 @@ function Gallery({data, preview}){
 export default Gallery
 
 export async function getStaticProps({params, preview = false }){
+  console.log(params)
     const gallerySlug = 'gallery'
     const images = await getClient(preview).fetch(groq`
                *[_type == 'galleryPage' && galleryName == 'gallery page']{

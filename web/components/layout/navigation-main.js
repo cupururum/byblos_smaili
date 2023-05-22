@@ -12,7 +12,7 @@ function NavigationMain(props){
     return (
         <div className="w-full h-full fixed inset-x-0 top-0 z-20 bg-romance overflow-scroll lg:px-16 xl:pl-24 4xl:px-40">
            <div className="px-10 pt-20 mb-8 xl:px-0  ">
-                <Link href="/"><a > <ByblosLogo/></a></Link>
+                <Link href="/"><ByblosLogo style={"w-60 h-10"}/></Link>
                <button className="fixed z-20 top-16 right-10 mt-3 lg:right-16 xl:right-20 2xl:right-28 4xl:right-36 " onClick={props.onClick}>
                     <Cross/>
                </button> 

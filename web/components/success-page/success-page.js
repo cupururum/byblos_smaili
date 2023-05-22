@@ -17,9 +17,11 @@ function SuccessSubmit() {
         <>
         {visible && 
             <div className="fixed z-20 inset-0 flex flex-col pt-40 bg-romance md:pt-52 xl:pt-60  ">
-                 <Link href="/"><button className="absolute top-10 right-10 z-20 focus:outline-none lg:static lg:flex lg:justify-end lg:mr-20" onClick={crossOnClick}>
-                   <WhiteCrossIcon/>
-                </button></Link>
+                 <Link href="/">
+                            <button className="absolute top-10 right-10 z-20 focus:outline-none lg:static lg:flex lg:justify-end lg:mr-20" onClick={crossOnClick}>
+                                <WhiteCrossIcon/>
+                            </button>
+                </Link>
                 <h1 className="w-full text-center text-introTextDesk"> See you! </h1>
                 <h2 className="w-full text-center text-socialCardText"> Your form submission has been received </h2>
                 <p className="w-full text-center text-dusty-creme text-lg">

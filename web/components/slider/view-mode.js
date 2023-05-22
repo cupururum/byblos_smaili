@@ -22,9 +22,7 @@ function ViewMode(props){
                     {slider && (
                      
                             <div className="absolute z-20 left-0 bottom-88  xsm:bottom-80 md:static">
-                                <ArrowLeft
-                                onClick={(e) => e.stopPropagation() || slider.prev()}
-                                />
+                                <ArrowLeft onClick={(e) => e.stopPropagation() || slider.prev()}/>
                             </div>
                   
                         )}
@@ -37,9 +35,7 @@ function ViewMode(props){
                     {slider && (
                
                             <div className="absolute z-20 right-0 bottom-88   xsm:bottom-80 md:static ">
-                                <ArrowRight
-                                onClick={(e) => e.stopPropagation() || slider.next()}
-                                />
+                                <ArrowRight onClick={(e) => e.stopPropagation() || slider.next()} />
                             </div>
                     
                         )}

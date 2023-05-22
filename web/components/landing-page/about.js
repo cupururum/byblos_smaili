@@ -26,11 +26,10 @@ function About(props) {
                     Serdecznie zapraszamy!
                 </p>
                 <Link href="/galeria">
-                    <a>
+                
                         <button className="w-56 h-16 mt-10 lg:mt-5 text-buttonJumbotron border-2 border-black focus:outline-none lg:hover:bg-btn-color-hover lg:hover:border-0 3xl:mt-6">
                             Galeria  &gt; 
                         </button>
-                    </a>
                 </Link>
             </div>
             <div className="xl:w-2/3 3xl:w-2/3">

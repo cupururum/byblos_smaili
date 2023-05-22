@@ -11,7 +11,7 @@ function Card(props) {
                         <p> Byblos </p>
                         <p>[Vegan na Moliera] </p>
                 </div>
-                <Link href={props.href}><a className="text-aboutText text-dusty-creme mt-8"> Przejdź &gt; </a></Link>
+                <Link href={props.href}><div className="text-aboutText text-dusty-creme mt-8"> Przejdź &gt; </div></Link>
             </div>
         </div>  
     )

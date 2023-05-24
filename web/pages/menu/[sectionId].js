@@ -153,7 +153,8 @@ export async function getStaticProps({params, preview = false }){
         props: {  
             preview,
             data: { page, menu, menuSectionId }
-        }
+        },
+        revalidate: 10
     }
 }
 

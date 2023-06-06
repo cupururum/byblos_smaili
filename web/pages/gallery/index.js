@@ -40,6 +40,8 @@ function Gallery({data, preview}){
         );
       }
 
+      
+
       const [isVewModeActive, setActiveViewMode] = useState(false)
       const [initialSlide, setInitialSlide] = useState(0)
       function onClickImage(e) {
@@ -87,6 +89,7 @@ function Gallery({data, preview}){
     
     return(
         <>
+         
             <div className="grid grid-cols-4">
                 <div className="row-span-2 col-span-2"></div>
                 <div className="row-span-1 col-span-1"></div>
@@ -104,7 +107,7 @@ function Gallery({data, preview}){
 export default Gallery
 
 export async function getStaticProps({params, preview = false }){
-  console.log(params)
+  
     const gallerySlug = 'gallery'
     const images = await getClient(preview).fetch(groq`
                *[_type == 'galleryPage' && galleryName == 'gallery page']{

@@ -10,7 +10,6 @@ function SingleArticle(props){
         return (<div> Loading... </div>)
     }
 
-    console.log(props.article)
     return(
         <Article article={props.article}/>
     )

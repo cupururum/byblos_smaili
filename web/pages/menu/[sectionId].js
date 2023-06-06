@@ -3,6 +3,8 @@ import {getClient} from '../../lib/sanity.server'
 import {usePreviewSubscription} from '../../lib/sanity'
 import useWindowSize from '../../hooks/useWindowSize'
 
+import { useRouter } from "next/router"
+
 import Navigation from '../../components/menu/navigation'
 import MenuItemsGrid from '../../components/menu/menu-items-grid'
 import NavigationMobile from '../../components/menu/navigation-mobile'
@@ -36,7 +38,9 @@ function MenuSection({data, preview}){
         );
       }
 
-    
+    { preview && <>You are in a preview</> }
+
+    const router = useRouter()
 
     const {data: previewData} = usePreviewSubscription(data?.query, {
         params: data?.menuSectionId ?? {},
@@ -44,10 +48,11 @@ function MenuSection({data, preview}){
         // This is why it's important to fetch *draft* content server-side!
         initialData: data?.menu,
         // The passed-down preview context determines whether this function does anything
-        enabled: preview,
+        enabled: preview || router.query.preview !== undefined
       })
 
       const page = filterDataToSingleItem(previewData, preview)
+      
     
 
 
@@ -76,7 +81,7 @@ function MenuSection({data, preview}){
     
 
     return(
-        <div className="px-7 pt-44 mb-36 xsm:px-10 lg:flex lg:justify-between lg:px-0 lg:mb-0 lg:pb-44">
+        <div className="px-7 pt-44 mb-36 xsm:px-10 lg:flex  lg:px-0 lg:mb-0 lg:pb-44 lg:gap-4">
             <div className="lg:w-1/12"></div>
             <div className="lg:w-3/12 xl:w-3/12">
                 <Navigation menuSections={page.menuSections} activeSection={data.menuSectionId}/>
@@ -91,7 +96,8 @@ export default MenuSection
 
 export async function getStaticProps({params, preview = false }){
    
-    const menuSectionId = params.sectionId
+    const menuSectionId = params.sectionId 
+  
      const menu = await getClient(preview).fetch(
         groq`{
             "menuItems": *[_type == 'menuItem' && references(*[_type=="menuSection" && slug.current == '${menuSectionId}']._id)]{

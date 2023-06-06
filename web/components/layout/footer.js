@@ -29,16 +29,17 @@ function Footer(props) {
  return(
      <>
         {isBookingFormVisible && <BookTheTable crossOnClick={bookTheTableCrossOnClick}/> }
-        <footer className="w-full px-16 pt-24 h-156  bg-romance xsm:px-24 md:flex md:justify-between  md:h-96 md:px-10 md:pt-16   lg:absolute lg:bottom-0  lg:h-36 lg:py-8 lg:px-16  xl:h-28 xl:py-6 xl:px-20 2xl:px-36 ">
+        <footer className="w-full px-16 pt-24 h-156  bg-romance xsm:px-24 sm:flex sm:justify-between  sm:h-116 sm:px-10 sm:pt-16 md:h-96   lg:absolute lg:bottom-0  lg:h-36 lg:py-8 lg:px-16  xl:h-28 xl:py-6 xl:px-20 2xl:px-36 ">
         
                 <div className="xl:flex xl:space-x-5 ">
                         <Link href="/"> <ByblosLogo style={"w-40 h-7 lg:mt-5"}/></Link>
-                </div>
-
-                <div className="hidden text-dusty-creme text-nav md:block md:mt-52 md:pt-2 lg:mt-3 xl:mt-4 ">
+                        <div className="hidden text-dusty-creme text-nav sm:block sm:mt-80 md:mt-56 sm:pt-2 lg:mt-3 xl:mt-4 ">
                             <p className="inline-block mr-4 xsm:ml-2 lg:ml-0 3xl:mr-8">© 2021 Byblos</p>
                             <p className="inline-block">Privacy Policy</p>
                 </div>
+                </div>
+
+
 
                 <div className="lg:flex lg:space-x-10">   
                     <Logistics  textStyle={"text-headerTextAdress font-bold mt-24 ml-7 md:mt-0 md:ml-0 md:space-y-4 xl:space-y-2  xl:mt-2 xl:h-9 3xl:mt-5 3xl:space-y-0 3xl:flex "}
@@ -61,7 +62,7 @@ function Footer(props) {
                         }
                     </div>
                 </div>
-                <div className="mt-16  text-dusty-creme text-nav md:hidden">
+                <div className="mt-16  text-dusty-creme text-nav sm:hidden">
                         <p className="inline-block mr-2 xsm:mr-3 ">© 2022 Byblos</p>
                         <p className="inline-block"><Link href="/cookies">Privacy Policy</Link></p>
                 </div>

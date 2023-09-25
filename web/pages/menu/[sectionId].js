@@ -158,7 +158,8 @@ export async function getStaticProps({params, preview = false }){
        
         props: {  
             preview,
-            data: { page, menu, menuSectionId }
+            data: { page, menu, menuSectionId },
+            revalidate: 30
         }
     }
 }
@@ -181,8 +182,7 @@ export async function getStaticPaths() {
     ))
     return {                   
       paths: paths,
-      fallback: true,
-      revalidate: 30
+      fallback: true
     }
   }
 

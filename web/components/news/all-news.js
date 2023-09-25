@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 function AllNews(props){
-    console.log(props)
 
     return(
         <div className="pt-36 pb-36 divide-y divide-white-coffee divide-solid px-7 xsm:px-10 md:grid md:grid-cols-2  md:divide-none md:gap-5 lg:px-0 lg:block lg:divide-solid lg:mx-20 lg:pt-36 xl:mx-24">

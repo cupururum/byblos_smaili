@@ -131,7 +131,8 @@ export async function getStaticProps({params, preview = false }){
        
         props: {  
             preview,
-            data: { page, images, gallerySlug }
+            data: { page, images, gallerySlug },
+          
         }
 
     }

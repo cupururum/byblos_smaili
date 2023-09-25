@@ -13,7 +13,7 @@ function Article(props) {
             </div>
             <div className="w-full px-10 pt-5 xl:px-108 xl:pt-52 lg:pb-36">
                 <div className="mb-5 text-addressTextInContactUsMobile lg:font-normal lg:text-center 3xl:text-introTextDesk">{props.article[0].title}</div>
-                <div className="text-aboutText lg:text-bodytextAdress lg:text-center">
+                <div className="text-aboutText lg:text-bodytextAdress lg:text-center space-y-4">
                     <PortableText blocks={props.article[0].body}/>
                 </div>
                 

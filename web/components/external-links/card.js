@@ -9,7 +9,7 @@ function Card(props) {
             <div className="w-72 h-40 ml-8 pl-20 pt-10 shadow-socialCard xsm:w-76 lg:pl-16 dxl:w-84 dxl:h-44 dxl:pl-24 3xl:w-88 ">
                 <div className="text-socialCardText"> 
                         <p> Byblos </p>
-                        <p>[Vegan na Moliera] </p>
+                       
                 </div>
                 <Link href={props.href}><div className="text-aboutText text-dusty-creme mt-8"> Przejdź &gt; </div></Link>
             </div>

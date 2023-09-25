@@ -4,7 +4,7 @@
 const previewSecret = "catscatscats"
 
 // Replace `remoteUrl` with your deployed Next.js site
-const remoteUrl = `https://determined-darwin-57b0c5.netlify.app/`
+const remoteUrl = `https://byblos-cafe.pl/`
 const localUrl = `http://localhost:3000`
 
 export default function resolveProductionUrl(doc) {
@@ -14,7 +14,6 @@ export default function resolveProductionUrl(doc) {
 
   previewUrl.pathname = `/api/preview`
   previewUrl.searchParams.append(`secret`, previewSecret)
-  previewUrl.searchParams.append(`slug`, doc?.slug?.current ?? `/`)
-
-  return previewUrl.toString()
+  previewUrl.searchParams.append(`slug`, doc.slug.current ?? `/`)
+  return previewUrl.toString().replaceAll('%2F', '/');
 }

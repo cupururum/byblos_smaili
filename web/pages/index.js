@@ -1,6 +1,7 @@
 import {groq} from 'next-sanity'
 import {getClient} from '../lib/sanity.server'
 import LandingPage from '../components/landing-page/landing-page'
+import PreviewAlert from '../components/preview/previewAlert'
 
 
 
@@ -13,9 +14,11 @@ function IndexPage(props) {
       </div>
     );
   }
+  console.log(props.preview)
 
   return (
     <div className="pb-32">
+      {props.preview && <PreviewAlert/>}
       <LandingPage linksAndLogos={ props.landingPageImgAssets.externalLink } heroImgs={ props.landingPageImgAssets.mainPageHeroImg} aboutImg={props.landingPageImgAssets.mainPageAbtImg}/>
     </div>
   )
@@ -23,7 +26,7 @@ function IndexPage(props) {
 
 export default IndexPage;
 
-export async function getStaticProps() {
+export async function getStaticProps({preview = false}) {
   
   
     const landingPageImgAssets  = await getClient().fetch(groq`
@@ -59,7 +62,7 @@ export async function getStaticProps() {
       
 
   return {
-    props: { landingPageImgAssets }
+    props: { landingPageImgAssets, preview }
   }
 }
 

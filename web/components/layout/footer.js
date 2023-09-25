@@ -34,8 +34,8 @@ function Footer(props) {
                 <div className="xl:flex xl:space-x-5 ">
                         <Link href="/"> <ByblosLogo style={"w-40 h-7 lg:mt-5"}/></Link>
                         <div className="hidden text-dusty-creme text-nav sm:block sm:mt-80 md:mt-56 sm:pt-2 lg:mt-3 xl:mt-4 ">
-                            <p className="inline-block mr-4 xsm:ml-2 lg:ml-0 3xl:mr-8">© 2021 Byblos</p>
-                            <p className="inline-block">Privacy Policy</p>
+                            <p className="inline-block mr-4 xsm:ml-2 lg:ml-0 3xl:mr-8">© 2023 Byblos</p>
+                            <p className="inline-block"><Link href="/cookies">Privacy Policy</Link></p>
                 </div>
                 </div>
 
@@ -63,7 +63,7 @@ function Footer(props) {
                     </div>
                 </div>
                 <div className="mt-16  text-dusty-creme text-nav sm:hidden">
-                        <p className="inline-block mr-2 xsm:mr-3 ">© 2022 Byblos</p>
+                        <p className="inline-block mr-2 xsm:mr-3 ">© 2023 Byblos</p>
                         <p className="inline-block"><Link href="/cookies">Privacy Policy</Link></p>
                 </div>
         

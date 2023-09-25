@@ -32,11 +32,11 @@ function AllNews(props){
                             <div className="md:mt-5  xl:ml-24 xl:w-2/3"> 
                                 <h1 className="text-introTextDesk md:text-addressTextInContactUsMobile">{article.title}</h1>
                                 <div className="mt-4 text-twoXlAboutText">{article.excerpt}</div>
-                               {/*  <Link href={`/news/${article.slug.current}`}>
+                              <Link href={`/news/${article.slug.current}`}>
                                     <button className="w-56 h-16 mt-10 text-buttonJumbotron border-2 border-black focus:outline-none lg:hover:bg-btn-color-hover lg:hover:border-0">
                                        Learn more 
                                     </button> 
-                                </Link>*/}
+                                </Link>
                             </div> 
                         </div>
                         )}     

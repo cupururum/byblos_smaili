@@ -38,7 +38,7 @@ function MenuSection({data, preview}){
         );
       }
 
-    { preview && <>You are in a preview</> }
+    
 
     const router = useRouter()
 

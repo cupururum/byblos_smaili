@@ -22,9 +22,7 @@ export async function getStaticProps({params, preview=false}) {
     const article  = await getClient(preview).fetch(groq`*[_type == 'article' && slug.current == '${articleSlug}']{_id, title,  excerpt, mainImage{asset->{url}}, body}`, articleSlug)
 
     return{
-        preview,
-        props: {article},
-        revalidate: 30
+        props: {article}
     }
 }
 

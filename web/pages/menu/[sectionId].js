@@ -53,8 +53,6 @@ function MenuSection({data, preview}){
 
       const page = filterDataToSingleItem(previewData, preview)
       
-    
-
 
     const windowSize = useWindowSize()
 

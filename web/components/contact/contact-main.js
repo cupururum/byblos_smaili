@@ -70,7 +70,7 @@ function ContactUs(props) {
                             </div>
                         </div>
                         <div>
-                            <textarea className="w-full h-52 mt-10 p-5 bg-textarea-contact placeholder-gray-300 focus:outline-none" placeholder="Potikay soobshenku pshu pshu pshu">
+                            <textarea className="w-full h-52 mt-10 p-5 bg-textarea-contact placeholder-gray-300 focus:outline-none" placeholder="Doniesenie...">
                             </textarea>
                         
                             <button className="w-56 h-16 mt-10 bg-white-coffee text-buttonJumbotron font-bold focus:outline-none lg:hover:bg-btn-color-hover" type="submit">

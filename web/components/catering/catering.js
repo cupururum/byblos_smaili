@@ -6,7 +6,6 @@ import CateringItem from "./catering-item"
 
 
 function Catering(props) {
-    console.log(props)
 
     return (
         <div className="pb-40">
@@ -27,10 +26,10 @@ function Catering(props) {
                         </div>
                         <div className="hidden w-1/12 xl:block"></div>
                         <div className="hidden  xl:grid xl:w-1/2 gap-10 grid-cols-3 ">
-                                    <div className="col-span-1 row-span-1"><Image src={props.catering.picturesOnTheTop[0].galleryDesktop.images[0].asset.url} width={237} height={280} alt="kanapki"/></div>
-                                    <div className='col-span-2 row-span-1'><Image src={props.catering.cateringItems[1].dishImage.asset.url} width={513} height={280}/></div>                       
-                                    <div className='col-span-2 row-span-1'><Image src={props.catering.cateringItems[4].dishImage.asset.url} width={513} height={280}/></div>
-                                    <div className="col-span-1 row-span-1"><Image src={props.catering.picturesOnTheTop[0].galleryDesktop.images[1].asset.url}  width={237} height={280} alt="table"/></div>
+                                    <div className="col-span-1 row-span-1"><Image src={props.catering.picturesOnTheTop[0].galleryDesktop.images[0].asset.url} width={237} height={280} className="h-72" alt="kanapki"/></div>
+                                    <div className='col-span-2 row-span-1'><Image src={props.catering.cateringItems[1].dishImage.asset.url} width={513} height={280} className="h-72" alt="Prime Ribs"/></div>                       
+                                    <div className='col-span-2 row-span-1'><Image src={props.catering.cateringItems[4].dishImage.asset.url} width={513} height={280} className="h-72"alt="Salmon"/></div>
+                                    <div className="col-span-1 row-span-1"><Image src={props.catering.picturesOnTheTop[0].galleryDesktop.images[1].asset.url}  width={237} height={280} className="h-72" alt="table"/></div>
                         </div>
                         <div className="hidden w-1/12 xl:block"></div>
                     </div>

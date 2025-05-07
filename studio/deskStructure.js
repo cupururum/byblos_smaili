@@ -97,6 +97,12 @@ export default () =>
         .schemaType('article')
         .child(S.documentTypeList('article').title("Article")),
 
+        S.listItem()
+        .title('Catering')
+        .schemaType('catering')
+        .child(S.documentTypeList('cateringItem').title("Catering Item")),
+
+
         
     
     ])

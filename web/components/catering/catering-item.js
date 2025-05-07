@@ -16,7 +16,7 @@ function CateringItem(props) {
             <div className="px-7 w-60">
                 <p className="mt-5 mb-1 text-dxlAboutText">{props.title}</p>
                 <p className="mt-6 mb-6 text-lgSocialCardText" >{props.description}</p>
-                <div className="w-24 h-10 bg-black text-socialCardText text-white pl-6 pt-1">{props.price}</div>
+                {/* <div className="w-24 h-10 bg-black text-socialCardText text-white pl-6 pt-1">{props.price}</div> */}
             </div>
             
         </div>

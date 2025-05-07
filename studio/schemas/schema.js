@@ -16,6 +16,8 @@ import gallery from './objects/gallery'
 import galleryPage from './galleryPage'
 import blockContent from './objects/blockContent'
 import article from './article'
+import catering from './catering'
+import cateringItem from './cateringItem'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -36,7 +38,9 @@ export default createSchema({
     galleryPage,
     gallery,
     article,
-    blockContent
+    blockContent,
+    catering,
+    cateringItem
 
   ]),
 })

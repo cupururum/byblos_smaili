@@ -13,8 +13,10 @@
     "keen-slider": "^5.5.1",
     "next": "^15.3.2",
     "next-sanity": "^0.4.0",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "sharp": "^0.34.1"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",

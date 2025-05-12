@@ -14,7 +14,6 @@ function IndexPage(props) {
       </div>
     );
   }
-  console.log(props.preview)
 
   return (
     <div className="pb-32">

@@ -51,6 +51,11 @@ function ContactUs(props) {
                         data-netlify="true">
 
                         <input type="hidden" name="form-name" value="contact"  />
+                        <p hidden>
+                            <label>Don’t fill this out if you're human:
+                            <input name="bot-field" />
+                            </label>
+                        </p>
 
                         <div className="md:w-1/2">
 
@@ -70,7 +75,7 @@ function ContactUs(props) {
                             </div>
                         </div>
                         <div>
-                            <textarea className="w-full h-52 mt-10 p-5 bg-textarea-contact placeholder-gray-300 focus:outline-none" placeholder="Doniesenie...">
+                            <textarea name="message" className="w-full h-52 mt-10 p-5 bg-textarea-contact placeholder-gray-300 focus:outline-none" placeholder="Doniesenie..." required>
                             </textarea>
                         
                             <button className="w-56 h-16 mt-10 bg-white-coffee text-buttonJumbotron font-bold focus:outline-none lg:hover:bg-btn-color-hover" type="submit">
